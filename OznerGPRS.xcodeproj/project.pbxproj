@@ -1,0 +1,705 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		684710991F6F5A3000CB69CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 684710981F6F5A3000CB69CC /* AppDelegate.swift */; };
+		6847109B1F6F5A3000CB69CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6847109A1F6F5A3000CB69CC /* ViewController.swift */; };
+		6847109E1F6F5A3000CB69CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6847109C1F6F5A3000CB69CC /* Main.storyboard */; };
+		684710A01F6F5A3000CB69CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6847109F1F6F5A3000CB69CC /* Assets.xcassets */; };
+		684710A31F6F5A3000CB69CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 684710A11F6F5A3000CB69CC /* LaunchScreen.storyboard */; };
+		684710AE1F6F5A3000CB69CC /* OznerGPRSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 684710AD1F6F5A3000CB69CC /* OznerGPRSTests.swift */; };
+		684710B91F6F5A3000CB69CC /* OznerGPRSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 684710B81F6F5A3000CB69CC /* OznerGPRSUITests.swift */; };
+		684710CB1F6F5E0900CB69CC /* MQTTHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 684710CA1F6F5E0900CB69CC /* MQTTHelper.swift */; };
+		684710D11F6F8FAA00CB69CC /* Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 684710D01F6F8FAA00CB69CC /* Helper.m */; };
+		686E3F201F72078F006D7411 /* AirPuterfierModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686E3F1F1F72078F006D7411 /* AirPuterfierModel.swift */; };
+		686E3F281F722995006D7411 /* GYErrorCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686E3F241F722995006D7411 /* GYErrorCode.swift */; };
+		686E3F291F722995006D7411 /* GYNetWorking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686E3F251F722995006D7411 /* GYNetWorking.swift */; };
+		686E3F2A1F722995006D7411 /* GYRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686E3F261F722995006D7411 /* GYRouter.swift */; };
+		686E3F2B1F722995006D7411 /* GYServiceApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686E3F271F722995006D7411 /* GYServiceApi.swift */; };
+		686E3F2D1F7229E3006D7411 /* SwiftNotice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686E3F2C1F7229E3006D7411 /* SwiftNotice.swift */; };
+		686E3F2F1F72343D006D7411 /* ValuesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686E3F2E1F72343D006D7411 /* ValuesModel.swift */; };
+		687E58001F72028600B50872 /* AirPuterfierCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687E57FE1F72028600B50872 /* AirPuterfierCell.swift */; };
+		687E58011F72028600B50872 /* AirPuterfierCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 687E57FF1F72028600B50872 /* AirPuterfierCell.xib */; };
+		68DC544A1F711CC000E53BB3 /* CodeScan.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 68DC54491F711CC000E53BB3 /* CodeScan.bundle */; };
+		68DC544C1F711D0C00E53BB3 /* GYScanVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68DC544B1F711D0C00E53BB3 /* GYScanVc.swift */; };
+		68DC544E1F711D3D00E53BB3 /* QQScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68DC544D1F711D3D00E53BB3 /* QQScanViewController.swift */; };
+		68DC54511F711D4200E53BB3 /* ScanResultController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68DC544F1F711D4200E53BB3 /* ScanResultController.xib */; };
+		68DC54521F711D4200E53BB3 /* ScanResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68DC54501F711D4200E53BB3 /* ScanResultController.swift */; };
+		68DC54541F711DAA00E53BB3 /* MyCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68DC54531F711DAA00E53BB3 /* MyCodeViewController.swift */; };
+		7443F13A3B51C182E6527B1F /* Pods_OznerGPRS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BCCDF4920CAC8421AB75BFF /* Pods_OznerGPRS.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		684710AA1F6F5A3000CB69CC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6847108D1F6F5A3000CB69CC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 684710941F6F5A3000CB69CC;
+			remoteInfo = OznerGPRS;
+		};
+		684710B51F6F5A3000CB69CC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6847108D1F6F5A3000CB69CC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 684710941F6F5A3000CB69CC;
+			remoteInfo = OznerGPRS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		29599D81C4BC2B1AF138F5A5 /* Pods-OznerGPRS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OznerGPRS.release.xcconfig"; path = "Pods/Target Support Files/Pods-OznerGPRS/Pods-OznerGPRS.release.xcconfig"; sourceTree = "<group>"; };
+		5BCCDF4920CAC8421AB75BFF /* Pods_OznerGPRS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OznerGPRS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		656C490ABD1AAB1493223444 /* Pods-OznerGPRS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OznerGPRS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OznerGPRS/Pods-OznerGPRS.debug.xcconfig"; sourceTree = "<group>"; };
+		684710951F6F5A3000CB69CC /* OznerGPRS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OznerGPRS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		684710981F6F5A3000CB69CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6847109A1F6F5A3000CB69CC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6847109D1F6F5A3000CB69CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6847109F1F6F5A3000CB69CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		684710A21F6F5A3000CB69CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		684710A41F6F5A3000CB69CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		684710A91F6F5A3000CB69CC /* OznerGPRSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OznerGPRSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		684710AD1F6F5A3000CB69CC /* OznerGPRSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OznerGPRSTests.swift; sourceTree = "<group>"; };
+		684710AF1F6F5A3000CB69CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		684710B41F6F5A3000CB69CC /* OznerGPRSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OznerGPRSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		684710B81F6F5A3000CB69CC /* OznerGPRSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OznerGPRSUITests.swift; sourceTree = "<group>"; };
+		684710BA1F6F5A3000CB69CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		684710CA1F6F5E0900CB69CC /* MQTTHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MQTTHelper.swift; sourceTree = "<group>"; };
+		684710CE1F6F8FA900CB69CC /* OznerGPRS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OznerGPRS-Bridging-Header.h"; sourceTree = "<group>"; };
+		684710CF1F6F8FAA00CB69CC /* Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Helper.h; sourceTree = "<group>"; };
+		684710D01F6F8FAA00CB69CC /* Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Helper.m; sourceTree = "<group>"; };
+		686E3F1F1F72078F006D7411 /* AirPuterfierModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AirPuterfierModel.swift; sourceTree = "<group>"; };
+		686E3F241F722995006D7411 /* GYErrorCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GYErrorCode.swift; sourceTree = "<group>"; };
+		686E3F251F722995006D7411 /* GYNetWorking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GYNetWorking.swift; sourceTree = "<group>"; };
+		686E3F261F722995006D7411 /* GYRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GYRouter.swift; sourceTree = "<group>"; };
+		686E3F271F722995006D7411 /* GYServiceApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GYServiceApi.swift; sourceTree = "<group>"; };
+		686E3F2C1F7229E3006D7411 /* SwiftNotice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftNotice.swift; sourceTree = "<group>"; };
+		686E3F2E1F72343D006D7411 /* ValuesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValuesModel.swift; sourceTree = "<group>"; };
+		687E57FE1F72028600B50872 /* AirPuterfierCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AirPuterfierCell.swift; sourceTree = "<group>"; };
+		687E57FF1F72028600B50872 /* AirPuterfierCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AirPuterfierCell.xib; sourceTree = "<group>"; };
+		68DC54491F711CC000E53BB3 /* CodeScan.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CodeScan.bundle; sourceTree = "<group>"; };
+		68DC544B1F711D0C00E53BB3 /* GYScanVc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GYScanVc.swift; sourceTree = "<group>"; };
+		68DC544D1F711D3D00E53BB3 /* QQScanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QQScanViewController.swift; sourceTree = "<group>"; };
+		68DC544F1F711D4200E53BB3 /* ScanResultController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScanResultController.xib; sourceTree = "<group>"; };
+		68DC54501F711D4200E53BB3 /* ScanResultController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanResultController.swift; sourceTree = "<group>"; };
+		68DC54531F711DAA00E53BB3 /* MyCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCodeViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		684710921F6F5A3000CB69CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7443F13A3B51C182E6527B1F /* Pods_OznerGPRS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		684710A61F6F5A3000CB69CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		684710B11F6F5A3000CB69CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6847108C1F6F5A3000CB69CC = {
+			isa = PBXGroup;
+			children = (
+				684710971F6F5A3000CB69CC /* OznerGPRS */,
+				684710AC1F6F5A3000CB69CC /* OznerGPRSTests */,
+				684710B71F6F5A3000CB69CC /* OznerGPRSUITests */,
+				684710961F6F5A3000CB69CC /* Products */,
+				7CCB6C0C7D8CAD6B4A4D4D22 /* Pods */,
+				CDE5ABDC5BBF154814D63712 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		684710961F6F5A3000CB69CC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				684710951F6F5A3000CB69CC /* OznerGPRS.app */,
+				684710A91F6F5A3000CB69CC /* OznerGPRSTests.xctest */,
+				684710B41F6F5A3000CB69CC /* OznerGPRSUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		684710971F6F5A3000CB69CC /* OznerGPRS */ = {
+			isa = PBXGroup;
+			children = (
+				686E3F231F722909006D7411 /* NetWork */,
+				684710981F6F5A3000CB69CC /* AppDelegate.swift */,
+				68DC54531F711DAA00E53BB3 /* MyCodeViewController.swift */,
+				6847109A1F6F5A3000CB69CC /* ViewController.swift */,
+				684710CA1F6F5E0900CB69CC /* MQTTHelper.swift */,
+				68DC544F1F711D4200E53BB3 /* ScanResultController.xib */,
+				68DC54501F711D4200E53BB3 /* ScanResultController.swift */,
+				68DC544B1F711D0C00E53BB3 /* GYScanVc.swift */,
+				68DC544D1F711D3D00E53BB3 /* QQScanViewController.swift */,
+				687E57FE1F72028600B50872 /* AirPuterfierCell.swift */,
+				687E57FF1F72028600B50872 /* AirPuterfierCell.xib */,
+				686E3F1F1F72078F006D7411 /* AirPuterfierModel.swift */,
+				686E3F2E1F72343D006D7411 /* ValuesModel.swift */,
+				684710CF1F6F8FAA00CB69CC /* Helper.h */,
+				684710D01F6F8FAA00CB69CC /* Helper.m */,
+				6847109C1F6F5A3000CB69CC /* Main.storyboard */,
+				6847109F1F6F5A3000CB69CC /* Assets.xcassets */,
+				68DC54491F711CC000E53BB3 /* CodeScan.bundle */,
+				684710A11F6F5A3000CB69CC /* LaunchScreen.storyboard */,
+				684710A41F6F5A3000CB69CC /* Info.plist */,
+				684710CE1F6F8FA900CB69CC /* OznerGPRS-Bridging-Header.h */,
+			);
+			path = OznerGPRS;
+			sourceTree = "<group>";
+		};
+		684710AC1F6F5A3000CB69CC /* OznerGPRSTests */ = {
+			isa = PBXGroup;
+			children = (
+				684710AD1F6F5A3000CB69CC /* OznerGPRSTests.swift */,
+				684710AF1F6F5A3000CB69CC /* Info.plist */,
+			);
+			path = OznerGPRSTests;
+			sourceTree = "<group>";
+		};
+		684710B71F6F5A3000CB69CC /* OznerGPRSUITests */ = {
+			isa = PBXGroup;
+			children = (
+				684710B81F6F5A3000CB69CC /* OznerGPRSUITests.swift */,
+				684710BA1F6F5A3000CB69CC /* Info.plist */,
+			);
+			path = OznerGPRSUITests;
+			sourceTree = "<group>";
+		};
+		686E3F231F722909006D7411 /* NetWork */ = {
+			isa = PBXGroup;
+			children = (
+				686E3F2C1F7229E3006D7411 /* SwiftNotice.swift */,
+				686E3F241F722995006D7411 /* GYErrorCode.swift */,
+				686E3F251F722995006D7411 /* GYNetWorking.swift */,
+				686E3F261F722995006D7411 /* GYRouter.swift */,
+				686E3F271F722995006D7411 /* GYServiceApi.swift */,
+			);
+			path = NetWork;
+			sourceTree = "<group>";
+		};
+		7CCB6C0C7D8CAD6B4A4D4D22 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				656C490ABD1AAB1493223444 /* Pods-OznerGPRS.debug.xcconfig */,
+				29599D81C4BC2B1AF138F5A5 /* Pods-OznerGPRS.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CDE5ABDC5BBF154814D63712 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5BCCDF4920CAC8421AB75BFF /* Pods_OznerGPRS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		684710941F6F5A3000CB69CC /* OznerGPRS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 684710BD1F6F5A3000CB69CC /* Build configuration list for PBXNativeTarget "OznerGPRS" */;
+			buildPhases = (
+				349BC2F16336E8DE9B8196E6 /* [CP] Check Pods Manifest.lock */,
+				684710911F6F5A3000CB69CC /* Sources */,
+				684710921F6F5A3000CB69CC /* Frameworks */,
+				684710931F6F5A3000CB69CC /* Resources */,
+				A789171B9DEC493C19664107 /* [CP] Embed Pods Frameworks */,
+				D351AE43CB061706FA386937 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OznerGPRS;
+			productName = OznerGPRS;
+			productReference = 684710951F6F5A3000CB69CC /* OznerGPRS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		684710A81F6F5A3000CB69CC /* OznerGPRSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 684710C01F6F5A3000CB69CC /* Build configuration list for PBXNativeTarget "OznerGPRSTests" */;
+			buildPhases = (
+				684710A51F6F5A3000CB69CC /* Sources */,
+				684710A61F6F5A3000CB69CC /* Frameworks */,
+				684710A71F6F5A3000CB69CC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				684710AB1F6F5A3000CB69CC /* PBXTargetDependency */,
+			);
+			name = OznerGPRSTests;
+			productName = OznerGPRSTests;
+			productReference = 684710A91F6F5A3000CB69CC /* OznerGPRSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		684710B31F6F5A3000CB69CC /* OznerGPRSUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 684710C31F6F5A3000CB69CC /* Build configuration list for PBXNativeTarget "OznerGPRSUITests" */;
+			buildPhases = (
+				684710B01F6F5A3000CB69CC /* Sources */,
+				684710B11F6F5A3000CB69CC /* Frameworks */,
+				684710B21F6F5A3000CB69CC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				684710B61F6F5A3000CB69CC /* PBXTargetDependency */,
+			);
+			name = OznerGPRSUITests;
+			productName = OznerGPRSUITests;
+			productReference = 684710B41F6F5A3000CB69CC /* OznerGPRSUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6847108D1F6F5A3000CB69CC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = macpro;
+				TargetAttributes = {
+					684710941F6F5A3000CB69CC = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = UZZG6NM74T;
+						LastSwiftMigration = 0830;
+						ProvisioningStyle = Automatic;
+					};
+					684710A81F6F5A3000CB69CC = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = UZZG6NM74T;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 684710941F6F5A3000CB69CC;
+					};
+					684710B31F6F5A3000CB69CC = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = UZZG6NM74T;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 684710941F6F5A3000CB69CC;
+					};
+				};
+			};
+			buildConfigurationList = 684710901F6F5A3000CB69CC /* Build configuration list for PBXProject "OznerGPRS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6847108C1F6F5A3000CB69CC;
+			productRefGroup = 684710961F6F5A3000CB69CC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				684710941F6F5A3000CB69CC /* OznerGPRS */,
+				684710A81F6F5A3000CB69CC /* OznerGPRSTests */,
+				684710B31F6F5A3000CB69CC /* OznerGPRSUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		684710931F6F5A3000CB69CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				684710A31F6F5A3000CB69CC /* LaunchScreen.storyboard in Resources */,
+				684710A01F6F5A3000CB69CC /* Assets.xcassets in Resources */,
+				6847109E1F6F5A3000CB69CC /* Main.storyboard in Resources */,
+				68DC54511F711D4200E53BB3 /* ScanResultController.xib in Resources */,
+				68DC544A1F711CC000E53BB3 /* CodeScan.bundle in Resources */,
+				687E58011F72028600B50872 /* AirPuterfierCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		684710A71F6F5A3000CB69CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		684710B21F6F5A3000CB69CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		349BC2F16336E8DE9B8196E6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A789171B9DEC493C19664107 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OznerGPRS/Pods-OznerGPRS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D351AE43CB061706FA386937 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OznerGPRS/Pods-OznerGPRS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		684710911F6F5A3000CB69CC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				686E3F2B1F722995006D7411 /* GYServiceApi.swift in Sources */,
+				6847109B1F6F5A3000CB69CC /* ViewController.swift in Sources */,
+				686E3F281F722995006D7411 /* GYErrorCode.swift in Sources */,
+				686E3F2D1F7229E3006D7411 /* SwiftNotice.swift in Sources */,
+				68DC544E1F711D3D00E53BB3 /* QQScanViewController.swift in Sources */,
+				687E58001F72028600B50872 /* AirPuterfierCell.swift in Sources */,
+				686E3F201F72078F006D7411 /* AirPuterfierModel.swift in Sources */,
+				686E3F291F722995006D7411 /* GYNetWorking.swift in Sources */,
+				684710CB1F6F5E0900CB69CC /* MQTTHelper.swift in Sources */,
+				68DC54521F711D4200E53BB3 /* ScanResultController.swift in Sources */,
+				686E3F2A1F722995006D7411 /* GYRouter.swift in Sources */,
+				684710991F6F5A3000CB69CC /* AppDelegate.swift in Sources */,
+				68DC54541F711DAA00E53BB3 /* MyCodeViewController.swift in Sources */,
+				686E3F2F1F72343D006D7411 /* ValuesModel.swift in Sources */,
+				684710D11F6F8FAA00CB69CC /* Helper.m in Sources */,
+				68DC544C1F711D0C00E53BB3 /* GYScanVc.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		684710A51F6F5A3000CB69CC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				684710AE1F6F5A3000CB69CC /* OznerGPRSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		684710B01F6F5A3000CB69CC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				684710B91F6F5A3000CB69CC /* OznerGPRSUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		684710AB1F6F5A3000CB69CC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 684710941F6F5A3000CB69CC /* OznerGPRS */;
+			targetProxy = 684710AA1F6F5A3000CB69CC /* PBXContainerItemProxy */;
+		};
+		684710B61F6F5A3000CB69CC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 684710941F6F5A3000CB69CC /* OznerGPRS */;
+			targetProxy = 684710B51F6F5A3000CB69CC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6847109C1F6F5A3000CB69CC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6847109D1F6F5A3000CB69CC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		684710A11F6F5A3000CB69CC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				684710A21F6F5A3000CB69CC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		684710BB1F6F5A3000CB69CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		684710BC1F6F5A3000CB69CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		684710BE1F6F5A3000CB69CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 656C490ABD1AAB1493223444 /* Pods-OznerGPRS.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = UZZG6NM74T;
+				INFOPLIST_FILE = OznerGPRS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Giant.OznerGPRS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "OznerGPRS/OznerGPRS-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		684710BF1F6F5A3000CB69CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 29599D81C4BC2B1AF138F5A5 /* Pods-OznerGPRS.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = UZZG6NM74T;
+				INFOPLIST_FILE = OznerGPRS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Giant.OznerGPRS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "OznerGPRS/OznerGPRS-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		684710C11F6F5A3000CB69CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = UZZG6NM74T;
+				INFOPLIST_FILE = OznerGPRSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Giant.OznerGPRSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OznerGPRS.app/OznerGPRS";
+			};
+			name = Debug;
+		};
+		684710C21F6F5A3000CB69CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = UZZG6NM74T;
+				INFOPLIST_FILE = OznerGPRSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Giant.OznerGPRSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OznerGPRS.app/OznerGPRS";
+			};
+			name = Release;
+		};
+		684710C41F6F5A3000CB69CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = UZZG6NM74T;
+				INFOPLIST_FILE = OznerGPRSUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Giant.OznerGPRSUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = OznerGPRS;
+			};
+			name = Debug;
+		};
+		684710C51F6F5A3000CB69CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = UZZG6NM74T;
+				INFOPLIST_FILE = OznerGPRSUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Giant.OznerGPRSUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = OznerGPRS;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		684710901F6F5A3000CB69CC /* Build configuration list for PBXProject "OznerGPRS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				684710BB1F6F5A3000CB69CC /* Debug */,
+				684710BC1F6F5A3000CB69CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		684710BD1F6F5A3000CB69CC /* Build configuration list for PBXNativeTarget "OznerGPRS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				684710BE1F6F5A3000CB69CC /* Debug */,
+				684710BF1F6F5A3000CB69CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		684710C01F6F5A3000CB69CC /* Build configuration list for PBXNativeTarget "OznerGPRSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				684710C11F6F5A3000CB69CC /* Debug */,
+				684710C21F6F5A3000CB69CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		684710C31F6F5A3000CB69CC /* Build configuration list for PBXNativeTarget "OznerGPRSUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				684710C41F6F5A3000CB69CC /* Debug */,
+				684710C51F6F5A3000CB69CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6847108D1F6F5A3000CB69CC /* Project object */;
+}

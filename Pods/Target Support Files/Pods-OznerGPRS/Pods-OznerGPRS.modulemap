@@ -1,0 +1,6 @@
+framework module Pods_OznerGPRS {
+  umbrella header "Pods-OznerGPRS-umbrella.h"
+
+  export *
+  module * { export * }
+}

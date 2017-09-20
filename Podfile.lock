@@ -1,0 +1,18 @@
+PODS:
+  - Alamofire (4.5.0)
+  - MQTTKit (0.1.0)
+  - swiftScan (1.1.1)
+
+DEPENDENCIES:
+  - Alamofire
+  - MQTTKit
+  - swiftScan (~> 1.1.0)
+
+SPEC CHECKSUMS:
+  Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
+  MQTTKit: a4e6b8aa92db1aeae917d2b773fd72a7749937c4
+  swiftScan: f1f7f3eccb67ed1fb9777d084486d201dfca0306
+
+PODFILE CHECKSUM: 4cc2aceb6dbdbce6e171c68307ed628aa3d6c59b
+
+COCOAPODS: 1.2.1
