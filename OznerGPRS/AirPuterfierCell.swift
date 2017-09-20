@@ -33,25 +33,29 @@ class AirPuterfierCell: UITableViewCell {
         
         
         for item in models {
-            print(item.key!)
-            switch item.key! {
+
+            switch item.key {
             case "PM25":
-                pmLb.text = item.value
+                pmLb.text = String(describing: (item.value!))
                 break
             case "VOCVAL":
-                vocLb.text = item.value
+                vocLb.text = String(describing: (item.value!))
                 break
             case "TIMEFIX1":
-                lxtimeLb.text = item.value
+                lxtimeLb.text = secondstoString(String(describing: (item.value!)))
                 break
             case "WINDSPEED":
-                speedLb.text = item.value
+                speedLb.text = String(describing: (item.value!))
                 break
             case "CHILDLOCK":
-                lockStateLb.text = item.value
+                lockStateLb.text = String(describing: (item.value!)) == "0" ? "关" : "开"
                 break
+//            case "MOTORSPEED":
+//                powerLb.text = String(describing:(item.value!)) == "0" ? "关机" : "开机"
+//                break
             case "POWER":
-                powerLb.text = item.value
+                powerLb.text = String(describing: (item.value!)) == "0" ? "关机" : "开机"
+                
                 break
                 
             default:
@@ -63,11 +67,22 @@ class AirPuterfierCell: UITableViewCell {
         
     }
     
+    private func secondstoString(_ seconds:String) -> String{
+        
+        let data = Date.init(timeIntervalSince1970: TimeInterval(seconds)!)
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        formatter.locale = NSLocale(localeIdentifier: "en") as Locale!
+        
+        return formatter.string(from: data)
+        
+    }
+    
     
     @IBAction func power(_ sender: Any) {
         
         
-        let arr = [["key":"POWER","type":"Boolean","value":1,"updateTime":Date().timeIntervalSince1970]]
+        let arr = ["key":"POWER","type":"Boolean","value":1,"updateTime":Date().timeIntervalSince1970] as [String : Any]
         let data = try! JSONSerialization.data(withJSONObject: arr, options: JSONSerialization.WritingOptions.prettyPrinted)
         let str = String.init(data: data, encoding: String.Encoding.utf8)
         
@@ -75,7 +90,7 @@ class AirPuterfierCell: UITableViewCell {
 //        mqtt.sendDataToDevice(data, topic: "AirPurifier/f0fe6b49d02d")
         mqtt.sendStringToDevice(str!, topic: "AirPurifier/f0fe6b49d02d")
         
-            
+        
         
     }
     override func setSelected(_ selected: Bool, animated: Bool) {

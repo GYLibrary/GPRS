@@ -17,8 +17,8 @@ import UIKit
 
 class ValuesModel: NSObject {
     
-    var key:String?
-    var updateTime:String?
-    var value:String?
+    var key:String = ""
+    var updateTime:Int = 0
+    var value:AnyObject?
 
 }

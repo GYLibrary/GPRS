@@ -14,12 +14,25 @@ class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSourc
 
     var mqtt:MQTTHelper!
     var dataArr:[ValuesModel] = []
+    var cellCount:Int = 0 {
+        didSet {
+            tableView.reloadData()
+        }
+    }
     
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         mqttInfo()
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+
+        tableView.register(UINib.init(nibName: "AirPuterfierCell", bundle: nil), forCellReuseIdentifier: "AirPuterfierCellID")
+    }
+    
+    private func mqttInfo() {
         
         mqtt = MQTTHelper.default
         
@@ -33,26 +46,50 @@ class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSourc
                 
                 print(item["key"]!)
                 
+                for i in 0...self.dataArr.count - 1{
+                    
+                    if String(describing: item["key"]!) == self.dataArr[i].key {
+                        
+                        self.dataArr.remove(at: i)
+                        
+                        let model = ValuesModel()
+                        model.key = item["key"] as! String
+                        model.updateTime = (item["updateTime"] as? Int ?? 0)!
+                        model.value = item["value"] as AnyObject
+                        
+                        self.dataArr.append(model)
+                        
+                        DispatchQueue.main.async {
+                            
+                            self.tableView.reloadData()
+                            
+                        }
+                        
+                        break
+                    }
+                    
+                }
+                
             }
         }
         sleep(2)
+       
         
         GYNetWorking.default.requestJson(GYRouter.getQuery(parameters: ["deviceType":"AirPurifier","deviceId":"f0fe6b49d02d"]), sucess: { (data) in
             
-//            print(data["values"])
+            //            print(data["values"])
             let jsonArr = data["values"] as! [[String:Any]]
             
             for item in jsonArr {
                 
                 let model = ValuesModel()
-                model.key = item["key"] as? String
-                model.updateTime = item["updateTime"] as? String
-                model.value = item["value"] as? String
+                model.key = (item["key"] as? String)!
+                model.updateTime = (item["updateTime"] as? Int ?? 0)!
+                model.value = item["value"] as AnyObject
                 self.dataArr.append(model)
                 
             }
             
-            print(self.dataArr)
             self.tableView.reloadData()
             
             
@@ -60,22 +97,14 @@ class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSourc
             print(error)
         }
         
-        tableView.delegate = self
-        tableView.dataSource = self
-
-        tableView.register(UINib.init(nibName: "AirPuterfierCell", bundle: nil), forCellReuseIdentifier: "AirPuterfierCellID")
-    }
-    
-    private func mqttInfo() {
-        
-       
     }
 
     @IBAction func scanCodeAction(_ sender: UIBarButtonItem) {
 
         let vc = QQScanViewController();
         vc.blcok = { (str) in
-
+            
+            self.cellCount = 1
             MQTTHelper.default.subscribeAction(str!)
         }
         var style = LBXScanViewStyle()
@@ -91,6 +120,7 @@ class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSourc
         
         if let str = UserDefaults.standard.value(forKey: "OznerSubscribe"){
             
+            cellCount = 1
             mqtt.subscribeAction(str as! String)
             
         }
@@ -100,11 +130,21 @@ class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSourc
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 1
+        return cellCount
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
+    }
+    
+    func tableView(_ tableView: UITableView, titleForDeleteConfirmationButtonForRowAt indexPath: IndexPath) -> String? {
+        
+        return "删除"
+        
+    }
+    
+    func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+        return true
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -115,6 +155,19 @@ class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSourc
         cell.reloadUI(dataArr)
         return cell
         
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if editingStyle == .delete {
+            cellCount = 0
+            mqtt.unsubscribAction("AirPurifier/f0fe6b49d02d")
+        }
+        
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

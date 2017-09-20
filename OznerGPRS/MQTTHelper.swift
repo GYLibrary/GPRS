@@ -99,8 +99,6 @@ class MQTTHelper: NSObject {
     func subscribeAction(_ str:String) {
         print(str)
         
-       
-        
         mqttClient.subscribe(str, withQos: AtLeastOnce) { (result) in
             print(result ?? "")
             UserDefaults.standard.set(str, forKey: "OznerSubscribe")
@@ -114,7 +112,7 @@ class MQTTHelper: NSObject {
         mqttClient.unsubscribe(str) {
             
             print("已取消订阅")
-            UserDefaults.standard.setNilValueForKey("OznerSubscribe")
+            UserDefaults.standard.setValue(nil, forKey: "OznerSubscribe")
             UserDefaults.standard.synchronize()
 
         }
