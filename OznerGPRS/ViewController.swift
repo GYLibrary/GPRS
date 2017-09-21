@@ -14,7 +14,7 @@ class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSourc
 
     var topView:TopView!
     var mqtt:MQTTHelper!
-    var dataArr:[[ValuesModel] = []
+    var dataArr:[ValuesModel] = []
     var cellCount:Int = 0 {
         didSet {
             tableView.reloadData()

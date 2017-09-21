@@ -76,37 +76,97 @@ class AirPuterfierCell: UITableViewCell {
         
         return formatter.string(from: data)
         
-    }
+    }    
     
-    
-    @IBAction func speed2Action(_ sender: Any) {
+    var currenSpeed = 0
+    @IBAction func speed2Action(_ sender: UIButton) {
+        
+        var speedArr = [0,4,5]
+        
+        currenSpeed += 1
+        
+        if currenSpeed >= 3 {
+            currenSpeed = 0
+        }
+        
+        GYNetWorking.default.requestJson(GYRouter.setterDevice(parameters: ["deviceType":"AirPurifier","deviceId":"f0fe6b49d02d","key":"WINDSPEED","value":speedArr[currenSpeed]]), sucess: { (code) in
+            
+            DispatchQueue.main.async {
+                
+                appDelegate.window?.noticeOnlyText("设置成功")
+                
+            }
+            
+        }) { (error) in
+            print(error)
+            appDelegate.window?.noticeOnlyText("设置失败")
+        }
         
     }
     
     //童锁
-    @IBAction func speedSetAction(_ sender: Any) {
+    @IBAction func speedSetAction(_ sender: UIButton) {
         
-        let arr = [["key":"CHILDLOCK","value":true]]
+        var isPower:Bool = true
+        if sender.titleLabel?.text == "关" {
+            isPower = !isPower
+        }
+        
+        GYNetWorking.default.requestJson(GYRouter.setterDevice(parameters: ["deviceType":"AirPurifier","deviceId":"f0fe6b49d02d","key":"CHILDLOCK","value":isPower]), sucess: { (code) in
+            
+            DispatchQueue.main.async {
+                
+                appDelegate.window?.noticeOnlyText("设置成功")
+                
+                if isPower {
+                    sender.setTitle("关", for: UIControlState.normal)
+                } else {
+                    sender.setTitle("开", for: UIControlState.normal)
+                }
+            }
+            
+        }) { (error) in
+            print(error)
+            appDelegate.window?.noticeOnlyText("设置失败")
+        }
+
+        
         //        let arr = ["IntKey":1000,"StringKey":"POWER","value":1] as [String : Any]
         
-        let data = try! JSONSerialization.data(withJSONObject: arr, options: JSONSerialization.WritingOptions.prettyPrinted)
-        
-        let str = String.init(data: data, encoding: String.Encoding.utf8)
-        print(str!)
-        let mqtt = MQTTHelper.default
-        mqtt.sendStringToDevice(str!, topic: "AirPurifier/f0fe6b49d02d")
+//        let data = try! JSONSerialization.data(withJSONObject: arr, options: JSONSerialization.WritingOptions.prettyPrinted)
+//        
+//        let str = String.init(data: data, encoding: String.Encoding.utf8)
+//        print(str!)
+//        let mqtt = MQTTHelper.default
+//        mqtt.sendStringToDevice(str!, topic: "AirPurifier/f0fe6b49d02d")
         
     }
     
     var power:Bool = true
     
-    @IBAction func power(_ sender: Any) {
+    @IBAction func power(_ sender: UIButton) {
     
-        
-        GYNetWorking.default.requestJson(GYRouter.setterDevice(parameters: ["deviceType":"AirPurifier","deviceId":"f0fe6b49d02d","key":"POWER","value":1]), sucess: { (code) in
-            print(code)
+        var isPower:Bool = true
+        if sender.titleLabel?.text == "关机" {
+            isPower = !isPower
+        }
+
+        GYNetWorking.default.requestJson(GYRouter.setterDevice(parameters: ["deviceType":"AirPurifier","deviceId":"f0fe6b49d02d","key":"POWER","value":isPower]), sucess: { (code) in
+            
+            DispatchQueue.main.async {
+              
+                appDelegate.window?.noticeOnlyText("设置成功")
+                
+                if isPower {
+                    sender.setTitle("关机", for: UIControlState.normal)
+                } else {
+                   sender.setTitle("关机", for: UIControlState.normal)
+                }
+            }
+            
         }) { (error) in
             print(error)
+            appDelegate.window?.noticeOnlyText("设置失败")
         }
         
         

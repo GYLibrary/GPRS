@@ -114,9 +114,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I3r-1g-Jym">
-                                <rect key="frame" x="111" y="108" width="46" height="30"/>
+                                <rect key="frame" x="106" y="108" width="69" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="设置风速"/>
                                 <connections>
                                     <action selector="speed2Action:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="t9N-Kl-LIZ"/>
                                 </connections>

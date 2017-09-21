@@ -153,9 +153,9 @@ class QQScanViewController: LBXScanViewController ,UIAlertViewDelegate{
         btnMyQR.setImage(UIImage(named: "CodeScan.bundle/qrcode_scan_btn_myqrcode_down"), for: UIControlState.highlighted)
         btnMyQR.addTarget(self, action: #selector(QQScanViewController.myCode), for: UIControlEvents.touchUpInside)
         
-        bottomItemsView?.addSubview(btnFlash)
-        bottomItemsView?.addSubview(btnPhoto)
-        bottomItemsView?.addSubview(btnMyQR)
+//        bottomItemsView?.addSubview(btnFlash)
+//        bottomItemsView?.addSubview(btnPhoto)
+//        bottomItemsView?.addSubview(btnMyQR)
         
         self.view .addSubview(bottomItemsView!)
         
