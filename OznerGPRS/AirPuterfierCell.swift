@@ -79,20 +79,49 @@ class AirPuterfierCell: UITableViewCell {
     }
     
     
-    @IBAction func power(_ sender: Any) {
-        
-        
-        let arr = ["key":"POWER","type":"Boolean","value":1,"updateTime":Date().timeIntervalSince1970] as [String : Any]
-        let data = try! JSONSerialization.data(withJSONObject: arr, options: JSONSerialization.WritingOptions.prettyPrinted)
-        let str = String.init(data: data, encoding: String.Encoding.utf8)
-        
-        let mqtt = MQTTHelper.default
-//        mqtt.sendDataToDevice(data, topic: "AirPurifier/f0fe6b49d02d")
-        mqtt.sendStringToDevice(str!, topic: "AirPurifier/f0fe6b49d02d")
-        
-        
+    @IBAction func speed2Action(_ sender: Any) {
         
     }
+    
+    //童锁
+    @IBAction func speedSetAction(_ sender: Any) {
+        
+        let arr = [["key":"CHILDLOCK","value":true]]
+        //        let arr = ["IntKey":1000,"StringKey":"POWER","value":1] as [String : Any]
+        
+        let data = try! JSONSerialization.data(withJSONObject: arr, options: JSONSerialization.WritingOptions.prettyPrinted)
+        
+        let str = String.init(data: data, encoding: String.Encoding.utf8)
+        print(str!)
+        let mqtt = MQTTHelper.default
+        mqtt.sendStringToDevice(str!, topic: "AirPurifier/f0fe6b49d02d")
+        
+    }
+    
+    var power:Bool = true
+    
+    @IBAction func power(_ sender: Any) {
+    
+        
+        GYNetWorking.default.requestJson(GYRouter.setterDevice(parameters: ["deviceType":"AirPurifier","deviceId":"f0fe6b49d02d","key":"POWER","value":1]), sucess: { (code) in
+            print(code)
+        }) { (error) in
+            print(error)
+        }
+        
+        
+//        let arr = [["key":"POWER","value":!power]]
+//        let arr = ["IntKey":1000,"StringKey":"POWER","value":1] as [String : Any]
+//        
+//        let data = try! JSONSerialization.data(withJSONObject: arr, options: JSONSerialization.WritingOptions.prettyPrinted)
+//        
+//        let str = String.init(data: data, encoding: String.Encoding.utf8)
+//        print(str!)
+//        let mqtt = MQTTHelper.default
+//        mqtt.sendStringToDevice(str!, topic: "AirPurifier/f0fe6b49d02d")
+        
+    }
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

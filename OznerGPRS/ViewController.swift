@@ -12,8 +12,9 @@ import swiftScan
 
 class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSource{
 
+    var topView:TopView!
     var mqtt:MQTTHelper!
-    var dataArr:[ValuesModel] = []
+    var dataArr:[[ValuesModel] = []
     var cellCount:Int = 0 {
         didSet {
             tableView.reloadData()
@@ -28,6 +29,17 @@ class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSourc
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        topView = UINib.init(nibName: "TopView", bundle: nil).instantiate(withOwner: nil, options: nil).last as! TopView
+        
+        topView.block = { () in
+            
+            self.cellCount = 1
+            self.tableView.tableHeaderView = nil
+            
+        }
+        
+        tableView.tableHeaderView = topView
 
         tableView.register(UINib.init(nibName: "AirPuterfierCell", bundle: nil), forCellReuseIdentifier: "AirPuterfierCellID")
     }
@@ -91,8 +103,6 @@ class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSourc
             }
             
             self.tableView.reloadData()
-            
-            
         }) { (error) in
             print(error)
         }
@@ -120,6 +130,7 @@ class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSourc
         
         if let str = UserDefaults.standard.value(forKey: "OznerSubscribe"){
             
+            self.tableView.tableHeaderView = nil
             cellCount = 1
             mqtt.subscribeAction(str as! String)
             
@@ -144,6 +155,7 @@ class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSourc
     }
     
     func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+        
         return true
     }
     
@@ -162,6 +174,8 @@ class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSourc
         if editingStyle == .delete {
             cellCount = 0
             mqtt.unsubscribAction("AirPurifier/f0fe6b49d02d")
+            tableView.tableHeaderView = topView
+
         }
         
     }

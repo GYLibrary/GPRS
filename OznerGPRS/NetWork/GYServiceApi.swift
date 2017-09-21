@@ -35,6 +35,14 @@ class GYServiceApi: NSObject {
         return "\(host)/service/query.do"
     }
     
+    
+    /// 操作设备
+    ///
+    /// - Returns: return value description
+    internal class func setterDevice() -> String {
+
+       return "\(host)/setter.do"
+    }
 
     
     /// 获取验证码

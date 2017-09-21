@@ -21,7 +21,7 @@ typealias recievedDataBlock = (Data,String) -> Void
 
 class MQTTHelper: NSObject {
     
-    var mqttClient:MQTTClient!
+    private var mqttClient:MQTTClient!
     
     static let `default`: MQTTHelper = MQTTHelper()
 
@@ -44,7 +44,6 @@ class MQTTHelper: NSObject {
         
         mqttClient.cleanSession=false
         
-        
         //http://iot.ozner.net:1884 (内网地址请使用192.168.173.21:1884)
         mqttClient.connect(toHost: "iot.ozner.net") { (code) in
             
@@ -52,10 +51,6 @@ class MQTTHelper: NSObject {
             case ConnectionAccepted:
                 
                 print("连接成功!")
-//                self.mqttClient.subscribe("AirPurifier/f0fe6b49d02d", withQos: AtLeastOnce) { (dic) in
-//                    print(dic)
-//                    
-//                }
             case ConnectionRefusedUnacceptableProtocolVersion:
                 print("ConnectionRefusedUnacceptableProtocolVersion")
             case ConnectionRefusedIdentiferRejected:

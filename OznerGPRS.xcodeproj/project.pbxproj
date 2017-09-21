@@ -25,6 +25,8 @@
 		686E3F2F1F72343D006D7411 /* ValuesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686E3F2E1F72343D006D7411 /* ValuesModel.swift */; };
 		687E58001F72028600B50872 /* AirPuterfierCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687E57FE1F72028600B50872 /* AirPuterfierCell.swift */; };
 		687E58011F72028600B50872 /* AirPuterfierCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 687E57FF1F72028600B50872 /* AirPuterfierCell.xib */; };
+		689CE0DC1F726CA200443015 /* TopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689CE0DB1F726CA200443015 /* TopView.swift */; };
+		689CE0DE1F726CAE00443015 /* TopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 689CE0DD1F726CAE00443015 /* TopView.xib */; };
 		68DC544A1F711CC000E53BB3 /* CodeScan.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 68DC54491F711CC000E53BB3 /* CodeScan.bundle */; };
 		68DC544C1F711D0C00E53BB3 /* GYScanVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68DC544B1F711D0C00E53BB3 /* GYScanVc.swift */; };
 		68DC544E1F711D3D00E53BB3 /* QQScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68DC544D1F711D3D00E53BB3 /* QQScanViewController.swift */; };
@@ -68,7 +70,7 @@
 		684710B41F6F5A3000CB69CC /* OznerGPRSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OznerGPRSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		684710B81F6F5A3000CB69CC /* OznerGPRSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OznerGPRSUITests.swift; sourceTree = "<group>"; };
 		684710BA1F6F5A3000CB69CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		684710CA1F6F5E0900CB69CC /* MQTTHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MQTTHelper.swift; sourceTree = "<group>"; };
+		684710CA1F6F5E0900CB69CC /* MQTTHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MQTTHelper.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		684710CE1F6F8FA900CB69CC /* OznerGPRS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OznerGPRS-Bridging-Header.h"; sourceTree = "<group>"; };
 		684710CF1F6F8FAA00CB69CC /* Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Helper.h; sourceTree = "<group>"; };
 		684710D01F6F8FAA00CB69CC /* Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Helper.m; sourceTree = "<group>"; };
@@ -81,6 +83,8 @@
 		686E3F2E1F72343D006D7411 /* ValuesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValuesModel.swift; sourceTree = "<group>"; };
 		687E57FE1F72028600B50872 /* AirPuterfierCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AirPuterfierCell.swift; sourceTree = "<group>"; };
 		687E57FF1F72028600B50872 /* AirPuterfierCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AirPuterfierCell.xib; sourceTree = "<group>"; };
+		689CE0DB1F726CA200443015 /* TopView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopView.swift; sourceTree = "<group>"; };
+		689CE0DD1F726CAE00443015 /* TopView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TopView.xib; sourceTree = "<group>"; };
 		68DC54491F711CC000E53BB3 /* CodeScan.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CodeScan.bundle; sourceTree = "<group>"; };
 		68DC544B1F711D0C00E53BB3 /* GYScanVc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GYScanVc.swift; sourceTree = "<group>"; };
 		68DC544D1F711D3D00E53BB3 /* QQScanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QQScanViewController.swift; sourceTree = "<group>"; };
@@ -151,6 +155,8 @@
 				68DC544D1F711D3D00E53BB3 /* QQScanViewController.swift */,
 				687E57FE1F72028600B50872 /* AirPuterfierCell.swift */,
 				687E57FF1F72028600B50872 /* AirPuterfierCell.xib */,
+				689CE0DB1F726CA200443015 /* TopView.swift */,
+				689CE0DD1F726CAE00443015 /* TopView.xib */,
 				686E3F1F1F72078F006D7411 /* AirPuterfierModel.swift */,
 				686E3F2E1F72343D006D7411 /* ValuesModel.swift */,
 				684710CF1F6F8FAA00CB69CC /* Helper.h */,
@@ -326,6 +332,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				689CE0DE1F726CAE00443015 /* TopView.xib in Resources */,
 				684710A31F6F5A3000CB69CC /* LaunchScreen.storyboard in Resources */,
 				684710A01F6F5A3000CB69CC /* Assets.xcassets in Resources */,
 				6847109E1F6F5A3000CB69CC /* Main.storyboard in Resources */,
@@ -411,6 +418,7 @@
 				68DC544E1F711D3D00E53BB3 /* QQScanViewController.swift in Sources */,
 				687E58001F72028600B50872 /* AirPuterfierCell.swift in Sources */,
 				686E3F201F72078F006D7411 /* AirPuterfierModel.swift in Sources */,
+				689CE0DC1F726CA200443015 /* TopView.swift in Sources */,
 				686E3F291F722995006D7411 /* GYNetWorking.swift in Sources */,
 				684710CB1F6F5E0900CB69CC /* MQTTHelper.swift in Sources */,
 				68DC54521F711D4200E53BB3 /* ScanResultController.swift in Sources */,
@@ -575,11 +583,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = UZZG6NM74T;
 				INFOPLIST_FILE = OznerGPRS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Giant.OznerGPRS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "OznerGPRS/OznerGPRS-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -592,11 +603,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = UZZG6NM74T;
 				INFOPLIST_FILE = OznerGPRS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Giant.OznerGPRS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "OznerGPRS/OznerGPRS-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
