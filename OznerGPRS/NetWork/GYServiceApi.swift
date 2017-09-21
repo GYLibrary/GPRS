@@ -45,6 +45,14 @@ class GYServiceApi: NSObject {
     }
 
     
+    /// 查询设备信息
+    ///
+    /// - Returns: return value description
+    internal class func searchDevice() -> String {
+        
+        return "\(host)/service/queryStatistics.do"
+    }
+    
     /// 获取验证码
     ///
     /// - Returns: return value description

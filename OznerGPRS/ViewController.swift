@@ -124,16 +124,13 @@ class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSourc
         
     }
     
-    var currenTitle = "PM25"
     @IBAction func searchAction(_ sender: Any) {
         
-        var titleArr = ["VOCVAL","PM25","POWER","HUMIDITY","TEMPERATURE","WINDSPEED"]
+
         
-        currenTitle = titleArr[arc4random()%6]
         
     }
     
-  
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -204,7 +201,9 @@ class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSourc
         if segue.identifier == "searchPush" {
             
             let vc = segue.destination as! HistoryVc
-            vc.title = ""
+            var titleArr = ["VOCVAL","PM25","POWER","HUMIDITY","TEMPERATURE","WINDSPEED"]
+            
+            vc.title = titleArr[Int(arc4random()%5)]
             
         }
         

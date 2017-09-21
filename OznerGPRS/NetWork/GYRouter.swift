@@ -46,6 +46,7 @@ enum GYRouter: URLRequestConvertible {
     
     case getQuery(parameters:[String:String])
     case setterDevice(parameters:NSDictionary)
+    case searchDevice(parameters:NSDictionary)
     /// 请求方式
     var method: Alamofire.HTTPMethod {
         
@@ -67,7 +68,7 @@ enum GYRouter: URLRequestConvertible {
             return .post
         case .compactInfo,.isCanApply,.getMyInviter,.getInviterInfo,.getUserApplyHistory,.getUserApplyStateByID:
             return .post
-        case .getQuery:
+        case .getQuery,.searchDevice:
             return .get
         case .setterDevice:
             return .post
@@ -111,6 +112,8 @@ enum GYRouter: URLRequestConvertible {
             return GYServiceApi.getQuery()
         case .setterDevice:
             return GYServiceApi.setterDevice()
+        case .searchDevice:
+            return GYServiceApi.searchDevice()
         }
         
     }
@@ -140,7 +143,7 @@ enum GYRouter: URLRequestConvertible {
             } catch  {
                 
             }
-        case .setterDevice(parameters: var parm):
+        case .setterDevice(parameters: var parm),.searchDevice(parameters: var parm):
             
             do {
                 

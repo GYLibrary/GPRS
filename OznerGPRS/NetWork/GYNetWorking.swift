@@ -131,7 +131,7 @@ extension GYNetWorking {
 //          return
         }
         let hud = appDelegate.window?.pleaseWait()
-        Print(urlRequest)
+        Print(urlRequest.urlRequest)
         let responseJSON: (DataResponse<Any>) -> Void = { [weak self]  (response:DataResponse<Any>) in
             hud?.hide()
             if let value = urlRequest.urlRequest?.url?.absoluteString {

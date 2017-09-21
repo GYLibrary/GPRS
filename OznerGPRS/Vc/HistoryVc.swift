@@ -22,7 +22,16 @@ class HistoryVc: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
+        
+        GYNetWorking.default.requestJson(GYRouter.searchDevice(parameters: ["deviceType":"AirPurifier","deviceId":"f0fe6b49d02d","key":self.title!,"count":10]), sucess: { (data) in
+            print(data)
+        }) { (error) in
+            print(error)
+        }
+        
     }
+    
     
     //MARK: - Override
     
