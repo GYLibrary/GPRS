@@ -76,7 +76,7 @@ class AirPuterfierCell: UITableViewCell {
         
         return formatter.string(from: data)
         
-    }    
+    }
     
     var currenSpeed = 0
     @IBAction func speed2Action(_ sender: UIButton) {

@@ -59,7 +59,7 @@
 		656C490ABD1AAB1493223444 /* Pods-OznerGPRS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OznerGPRS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OznerGPRS/Pods-OznerGPRS.debug.xcconfig"; sourceTree = "<group>"; };
 		684710951F6F5A3000CB69CC /* OznerGPRS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OznerGPRS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		684710981F6F5A3000CB69CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6847109A1F6F5A3000CB69CC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6847109A1F6F5A3000CB69CC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../ViewController.swift; sourceTree = "<group>"; };
 		6847109D1F6F5A3000CB69CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6847109F1F6F5A3000CB69CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		684710A21F6F5A3000CB69CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -70,27 +70,27 @@
 		684710B41F6F5A3000CB69CC /* OznerGPRSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OznerGPRSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		684710B81F6F5A3000CB69CC /* OznerGPRSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OznerGPRSUITests.swift; sourceTree = "<group>"; };
 		684710BA1F6F5A3000CB69CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		684710CA1F6F5E0900CB69CC /* MQTTHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MQTTHelper.swift; sourceTree = "<group>"; wrapsLines = 0; };
+		684710CA1F6F5E0900CB69CC /* MQTTHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MQTTHelper.swift; path = ../MQTTHelper.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		684710CE1F6F8FA900CB69CC /* OznerGPRS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OznerGPRS-Bridging-Header.h"; sourceTree = "<group>"; };
-		684710CF1F6F8FAA00CB69CC /* Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Helper.h; sourceTree = "<group>"; };
-		684710D01F6F8FAA00CB69CC /* Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Helper.m; sourceTree = "<group>"; };
-		686E3F1F1F72078F006D7411 /* AirPuterfierModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AirPuterfierModel.swift; sourceTree = "<group>"; };
+		684710CF1F6F8FAA00CB69CC /* Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Helper.h; path = ../Helper.h; sourceTree = "<group>"; };
+		684710D01F6F8FAA00CB69CC /* Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Helper.m; path = ../Helper.m; sourceTree = "<group>"; };
+		686E3F1F1F72078F006D7411 /* AirPuterfierModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AirPuterfierModel.swift; path = ../AirPuterfierModel.swift; sourceTree = "<group>"; };
 		686E3F241F722995006D7411 /* GYErrorCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GYErrorCode.swift; sourceTree = "<group>"; };
 		686E3F251F722995006D7411 /* GYNetWorking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GYNetWorking.swift; sourceTree = "<group>"; };
 		686E3F261F722995006D7411 /* GYRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GYRouter.swift; sourceTree = "<group>"; };
 		686E3F271F722995006D7411 /* GYServiceApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GYServiceApi.swift; sourceTree = "<group>"; };
 		686E3F2C1F7229E3006D7411 /* SwiftNotice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftNotice.swift; sourceTree = "<group>"; };
-		686E3F2E1F72343D006D7411 /* ValuesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValuesModel.swift; sourceTree = "<group>"; };
-		687E57FE1F72028600B50872 /* AirPuterfierCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AirPuterfierCell.swift; sourceTree = "<group>"; };
-		687E57FF1F72028600B50872 /* AirPuterfierCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AirPuterfierCell.xib; sourceTree = "<group>"; };
-		689CE0DB1F726CA200443015 /* TopView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopView.swift; sourceTree = "<group>"; };
-		689CE0DD1F726CAE00443015 /* TopView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TopView.xib; sourceTree = "<group>"; };
+		686E3F2E1F72343D006D7411 /* ValuesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ValuesModel.swift; path = ../ValuesModel.swift; sourceTree = "<group>"; };
+		687E57FE1F72028600B50872 /* AirPuterfierCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AirPuterfierCell.swift; path = ../AirPuterfierCell.swift; sourceTree = "<group>"; };
+		687E57FF1F72028600B50872 /* AirPuterfierCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AirPuterfierCell.xib; path = ../AirPuterfierCell.xib; sourceTree = "<group>"; };
+		689CE0DB1F726CA200443015 /* TopView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TopView.swift; path = ../TopView.swift; sourceTree = "<group>"; };
+		689CE0DD1F726CAE00443015 /* TopView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TopView.xib; path = ../TopView.xib; sourceTree = "<group>"; };
 		68DC54491F711CC000E53BB3 /* CodeScan.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CodeScan.bundle; sourceTree = "<group>"; };
-		68DC544B1F711D0C00E53BB3 /* GYScanVc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GYScanVc.swift; sourceTree = "<group>"; };
-		68DC544D1F711D3D00E53BB3 /* QQScanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QQScanViewController.swift; sourceTree = "<group>"; };
-		68DC544F1F711D4200E53BB3 /* ScanResultController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScanResultController.xib; sourceTree = "<group>"; };
-		68DC54501F711D4200E53BB3 /* ScanResultController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanResultController.swift; sourceTree = "<group>"; };
-		68DC54531F711DAA00E53BB3 /* MyCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCodeViewController.swift; sourceTree = "<group>"; };
+		68DC544B1F711D0C00E53BB3 /* GYScanVc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GYScanVc.swift; path = ../GYScanVc.swift; sourceTree = "<group>"; };
+		68DC544D1F711D3D00E53BB3 /* QQScanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QQScanViewController.swift; path = ../QQScanViewController.swift; sourceTree = "<group>"; };
+		68DC544F1F711D4200E53BB3 /* ScanResultController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ScanResultController.xib; path = ../ScanResultController.xib; sourceTree = "<group>"; };
+		68DC54501F711D4200E53BB3 /* ScanResultController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScanResultController.swift; path = ../ScanResultController.swift; sourceTree = "<group>"; };
+		68DC54531F711DAA00E53BB3 /* MyCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyCodeViewController.swift; path = ../MyCodeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +119,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6837370F1F73A48700367194 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				689CE0DB1F726CA200443015 /* TopView.swift */,
+				689CE0DD1F726CAE00443015 /* TopView.xib */,
+				687E57FE1F72028600B50872 /* AirPuterfierCell.swift */,
+				687E57FF1F72028600B50872 /* AirPuterfierCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		683737101F73A4C700367194 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				686E3F2E1F72343D006D7411 /* ValuesModel.swift */,
+				686E3F1F1F72078F006D7411 /* AirPuterfierModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		683737111F73A4C700367194 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				684710CA1F6F5E0900CB69CC /* MQTTHelper.swift */,
+				684710CF1F6F8FAA00CB69CC /* Helper.h */,
+				684710D01F6F8FAA00CB69CC /* Helper.m */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		683737121F73A4C700367194 /* Vc */ = {
+			isa = PBXGroup;
+			children = (
+				68DC54531F711DAA00E53BB3 /* MyCodeViewController.swift */,
+				6847109A1F6F5A3000CB69CC /* ViewController.swift */,
+				68DC54501F711D4200E53BB3 /* ScanResultController.swift */,
+				68DC544F1F711D4200E53BB3 /* ScanResultController.xib */,
+				68DC544B1F711D0C00E53BB3 /* GYScanVc.swift */,
+				68DC544D1F711D3D00E53BB3 /* QQScanViewController.swift */,
+			);
+			path = Vc;
+			sourceTree = "<group>";
+		};
 		6847108C1F6F5A3000CB69CC = {
 			isa = PBXGroup;
 			children = (
@@ -144,23 +187,12 @@
 		684710971F6F5A3000CB69CC /* OznerGPRS */ = {
 			isa = PBXGroup;
 			children = (
+				683737101F73A4C700367194 /* Model */,
+				683737111F73A4C700367194 /* Tools */,
+				683737121F73A4C700367194 /* Vc */,
+				6837370F1F73A48700367194 /* View */,
 				686E3F231F722909006D7411 /* NetWork */,
 				684710981F6F5A3000CB69CC /* AppDelegate.swift */,
-				68DC54531F711DAA00E53BB3 /* MyCodeViewController.swift */,
-				6847109A1F6F5A3000CB69CC /* ViewController.swift */,
-				684710CA1F6F5E0900CB69CC /* MQTTHelper.swift */,
-				68DC54501F711D4200E53BB3 /* ScanResultController.swift */,
-				68DC544F1F711D4200E53BB3 /* ScanResultController.xib */,
-				68DC544B1F711D0C00E53BB3 /* GYScanVc.swift */,
-				68DC544D1F711D3D00E53BB3 /* QQScanViewController.swift */,
-				687E57FE1F72028600B50872 /* AirPuterfierCell.swift */,
-				687E57FF1F72028600B50872 /* AirPuterfierCell.xib */,
-				689CE0DB1F726CA200443015 /* TopView.swift */,
-				689CE0DD1F726CAE00443015 /* TopView.xib */,
-				686E3F1F1F72078F006D7411 /* AirPuterfierModel.swift */,
-				686E3F2E1F72343D006D7411 /* ValuesModel.swift */,
-				684710CF1F6F8FAA00CB69CC /* Helper.h */,
-				684710D01F6F8FAA00CB69CC /* Helper.m */,
 				6847109C1F6F5A3000CB69CC /* Main.storyboard */,
 				6847109F1F6F5A3000CB69CC /* Assets.xcassets */,
 				68DC54491F711CC000E53BB3 /* CodeScan.bundle */,

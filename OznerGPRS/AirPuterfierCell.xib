@@ -77,7 +77,7 @@
                                     <constraint firstAttribute="width" constant="62" id="V6y-bY-p3u"/>
                                     <constraint firstAttribute="height" constant="30" id="vMS-A5-iM8"/>
                                 </constraints>
-                                <state key="normal" title="开"/>
+                                <state key="normal" title="开机"/>
                                 <connections>
                                     <action selector="power:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="IQi-Yy-JhU"/>
                                 </connections>
