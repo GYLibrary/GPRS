@@ -125,6 +125,12 @@ enum GYRouter: URLRequestConvertible {
         var mutableURLRequest = URLRequest(url: url)
         mutableURLRequest.httpMethod = method.rawValue
         
+
+//        mutableURLRequest.addValue("application/x-www-form-urlencoded; charset=UTF-8", forHTTPHeaderField: "Content-Type")
+//        let postString = "deviceId=112233445566&deviceType=AirPurifier&key=POWER&value=false"
+//        
+//        mutableURLRequest.httpBody = postString.data(using: String.Encoding.utf8)
+
         /// 根据需求设置
 //        GYRouter.token = UserAccount.loadAccount()?.acctoken
         if let token = GYRouter.token {

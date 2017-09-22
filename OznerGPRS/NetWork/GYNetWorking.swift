@@ -161,11 +161,71 @@ extension GYNetWorking {
         alldataRequestTask.setValue(dataRequest, forKey: (urlRequest.urlRequest?.url?.absoluteString)!)
     }
     
+    func requesttext(_ urlRequest: URLRequestConvertible, sucess:@escaping GYHttpRequestSuccess,failure: @escaping GYHttpRequestFailed) {
+        if !GYNetWorking.default.isReachable() {
+            DispatchQueue.main.async {
+                appDelegate.window?.noticeOnlyText("无网络")
+                
+            }
+            //          return
+        }
+        let hud = appDelegate.window?.pleaseWait()
+        Print(urlRequest.urlRequest)
+        let responseJSON: (DataResponse<String>) -> Void = { [weak self]  (response:DataResponse<String>) in
+            hud?.hide()
+            if let value = urlRequest.urlRequest?.url?.absoluteString {
+                //                sleep(3)
+                self?.alldataRequestTask.removeObject(forKey: value)
+                
+            }
+            
+            self?.handle(response, sucess: sucess, failure: failure)
+            
+        }
+        
+        let task = alldataRequestTask.value(forKey: (urlRequest.urlRequest?.url?.absoluteString)!) as? DataRequest
+        guard isRequest && (task == nil) else {
+            return
+        }
+        
+        task?.cancel()
+        
+        let manager = AlamofireManager.default
+        //        此处设置超时无效
+        //                manager.session.configuration.timeoutIntervalForRequest = 3
+        let dataRequest =  manager.request(urlRequest)
+                                  .validate(contentType: ["text/html"])
+                                  .responseString(completionHandler: responseJSON)
+        
+        alldataRequestTask.setValue(dataRequest, forKey: (urlRequest.urlRequest?.url?.absoluteString)!)
+    }
+
+    
+    
 }
 
 
 // MARK: - 处理请求结果
 extension GYNetWorking {
+    
+    
+    fileprivate func handle(_ response: DataResponse<String> ,sucess:@escaping GYHttpRequestSuccess,failure: @escaping GYHttpRequestFailed) {
+        
+        if let _ = response.result.value {
+            switch response.result {
+            case .success(let value):
+                sucess(value as AnyObject)
+                break
+            case .failure(let error):
+                
+                failure(error)
+            default:
+                break
+            }
+            
+        }
+        
+    }
     
     /// 处理请求结果 （根据项目需求修改）
     ///

@@ -89,18 +89,29 @@ class AirPuterfierCell: UITableViewCell {
             currenSpeed = 0
         }
         
-        GYNetWorking.default.requestJson(GYRouter.setterDevice(parameters: ["deviceType":"AirPurifier","deviceId":"f0fe6b49d02d","key":"WINDSPEED","value":speedArr[currenSpeed]]), sucess: { (code) in
-            
-            DispatchQueue.main.async {
-                
-                appDelegate.window?.noticeOnlyText("设置成功")
-                
-            }
-            
-        }) { (error) in
-            print(error)
-            appDelegate.window?.noticeOnlyText("设置失败")
-        }
+        
+        let arr = [["key":"WINDSPEED","value":speedArr[currenSpeed],"type":"Integer","updateTime":Date().timeIntervalSince1970]]
+        
+        let data = try! JSONSerialization.data(withJSONObject: arr, options: JSONSerialization.WritingOptions.prettyPrinted)
+        
+        let str = String.init(data: data, encoding: String.Encoding.utf8)
+        print(str!)
+        let mqtt = MQTTHelper.default
+        mqtt.sendStringToDevice(str!, topic: "AirPurifier/f0fe6b49d02d")
+
+        
+//        GYNetWorking.default.requestJson(GYRouter.setterDevice(parameters: ["deviceType":"AirPurifier","deviceId":"f0fe6b49d02d","key":"WINDSPEED","value":speedArr[currenSpeed]]), sucess: { (code) in
+//            
+//            DispatchQueue.main.async {
+//                
+//                appDelegate.window?.noticeOnlyText("设置成功")
+//                
+//            }
+//            
+//        }) { (error) in
+//            print(error)
+//            appDelegate.window?.noticeOnlyText("设置失败")
+//        }
         
     }
     
@@ -110,29 +121,32 @@ class AirPuterfierCell: UITableViewCell {
         var isPower:Bool = true
         if sender.titleLabel?.text == "关" {
             isPower = !isPower
+            sender.setTitle("开", for: UIControlState.normal)
+        } else {
+            sender.setTitle("关", for: UIControlState.normal)
         }
         
-        GYNetWorking.default.requestJson(GYRouter.setterDevice(parameters: ["deviceType":"AirPurifier","deviceId":"f0fe6b49d02d","key":"CHILDLOCK","value":isPower]), sucess: { (code) in
-            
-            DispatchQueue.main.async {
-                
-                appDelegate.window?.noticeOnlyText("设置成功")
-                
-                if isPower {
-                    sender.setTitle("关", for: UIControlState.normal)
-                } else {
-                    sender.setTitle("开", for: UIControlState.normal)
-                }
-            }
-            
-        }) { (error) in
-            print(error)
-            appDelegate.window?.noticeOnlyText("设置失败")
-        }
+//        GYNetWorking.default.requestJson(GYRouter.setterDevice(parameters: ["deviceType":"AirPurifier","deviceId":"f0fe6b49d02d","key":"CHILDLOCK","value":isPower]), sucess: { (code) in
+//            
+//            DispatchQueue.main.async {
+//                
+//                appDelegate.window?.noticeOnlyText("设置成功")
+//                
+//                if isPower {
+//                    sender.setTitle("关", for: UIControlState.normal)
+//                } else {
+//                    sender.setTitle("开", for: UIControlState.normal)
+//                }
+//            }
+//            
+//        }) { (error) in
+//            print(error)
+//            appDelegate.window?.noticeOnlyText("设置失败")
+//        }
 
         
-        //        let arr = ["IntKey":1000,"StringKey":"POWER","value":1] as [String : Any]
-        
+//        let arr = [["key":"CHILDLOCK","value":isPower,"type":"Boolean","updateTime":Date().timeIntervalSince1970]]
+//        
 //        let data = try! JSONSerialization.data(withJSONObject: arr, options: JSONSerialization.WritingOptions.prettyPrinted)
 //        
 //        let str = String.init(data: data, encoding: String.Encoding.utf8)
@@ -149,36 +163,39 @@ class AirPuterfierCell: UITableViewCell {
         var isPower:Bool = true
         if sender.titleLabel?.text == "关机" {
             isPower = !isPower
+            sender.setTitle("开机", for: UIControlState.normal)
+        } else {
+            sender.setTitle("关机", for: UIControlState.normal)
         }
 
-        GYNetWorking.default.requestJson(GYRouter.setterDevice(parameters: ["deviceType":"AirPurifier","deviceId":"f0fe6b49d02d","key":"POWER","value":isPower]), sucess: { (code) in
-            
-            DispatchQueue.main.async {
-              
-                appDelegate.window?.noticeOnlyText("设置成功")
-                
-                if isPower {
-                    sender.setTitle("关机", for: UIControlState.normal)
-                } else {
-                   sender.setTitle("关机", for: UIControlState.normal)
-                }
-            }
-            
-        }) { (error) in
-            print(error)
-            appDelegate.window?.noticeOnlyText("设置失败")
-        }
+//        GYNetWorking.default.requesttext(GYRouter.setterDevice(parameters: ["deviceType":"AirPurifier","deviceId":"f0fe6b49d02d","key":"POWER","value":isPower]), sucess: { (code) in
+//            
+//            print(code)
+//            DispatchQueue.main.async {
+//              
+//                appDelegate.window?.noticeOnlyText("设置成功")
+//                
+//                if isPower {
+//                    sender.setTitle("关机", for: UIControlState.normal)
+//                } else {
+//                   sender.setTitle("关机", for: UIControlState.normal)
+//                }
+//            }
+//            
+//        }) { (error) in
+//            print(error)
+//            appDelegate.window?.noticeOnlyText("设置失败")
+//        }
         
         
 //        let arr = [["key":"POWER","value":!power]]
-//        let arr = ["IntKey":1000,"StringKey":"POWER","value":1] as [String : Any]
-//        
-//        let data = try! JSONSerialization.data(withJSONObject: arr, options: JSONSerialization.WritingOptions.prettyPrinted)
-//        
-//        let str = String.init(data: data, encoding: String.Encoding.utf8)
-//        print(str!)
-//        let mqtt = MQTTHelper.default
-//        mqtt.sendStringToDevice(str!, topic: "AirPurifier/f0fe6b49d02d")
+        let arr = [["key":"POWER","value":isPower,"type":"Boolean","updateTime":Date().timeIntervalSince1970]]
+        let data = try! JSONSerialization.data(withJSONObject: arr, options: JSONSerialization.WritingOptions.prettyPrinted)
+//
+        let str = String.init(data: data, encoding: String.Encoding.utf8)
+        print(str!)
+        let mqtt = MQTTHelper.default
+        mqtt.sendStringToDevice(str!, topic: "AirPurifier/f0fe6b49d02d")
         
     }
     
