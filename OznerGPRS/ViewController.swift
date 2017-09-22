@@ -40,12 +40,15 @@ class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSourc
         }
         
         tableView.tableHeaderView = topView
-
+        tableView.separatorStyle = .none
         tableView.register(UINib.init(nibName: "AirPuterfierCell", bundle: nil), forCellReuseIdentifier: "AirPuterfierCellID")
+        tableView.register(UINib.init(nibName: "WaterPurifiCell", bundle: nil), forCellReuseIdentifier: "WaterPurifiCellID")
     }
     
     private func mqttInfo() {
         
+        
+        navigationItem.leftBarButtonItem = nil
         mqtt = MQTTHelper.default
         
         mqtt.block = { (data,ploadStr) -> Void in
@@ -166,11 +169,14 @@ class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSourc
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "AirPuterfierCellID") as! AirPuterfierCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "WaterPurifiCellID") as! WaterPurifiCell
         
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "AirPuterfierCellID") as! AirPuterfierCell
+//        
         cell.selectionStyle = .none
-        cell.reloadUI(dataArr)
+//        cell.reloadUI(dataArr)
         return cell
         
     }
@@ -191,7 +197,7 @@ class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSourc
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 280
+        return view.frame.height - 70
     }
     
     

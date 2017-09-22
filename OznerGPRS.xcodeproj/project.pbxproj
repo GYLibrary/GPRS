@@ -27,6 +27,9 @@
 		687E58001F72028600B50872 /* AirPuterfierCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687E57FE1F72028600B50872 /* AirPuterfierCell.swift */; };
 		687E58011F72028600B50872 /* AirPuterfierCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 687E57FF1F72028600B50872 /* AirPuterfierCell.xib */; };
 		6884D3011F74B1D9009CD97B /* GYHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6884D3001F74B1D9009CD97B /* GYHelper.swift */; };
+		6884D3041F74D5FD009CD97B /* WaterPurifiCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6884D3021F74D5FD009CD97B /* WaterPurifiCell.swift */; };
+		6884D3051F74D5FD009CD97B /* WaterPurifiCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6884D3031F74D5FD009CD97B /* WaterPurifiCell.xib */; };
+		6884D3071F74E077009CD97B /* WaterPurifierHeadCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6884D3061F74E077009CD97B /* WaterPurifierHeadCircleView.swift */; };
 		689CE0DC1F726CA200443015 /* TopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689CE0DB1F726CA200443015 /* TopView.swift */; };
 		689CE0DE1F726CAE00443015 /* TopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 689CE0DD1F726CAE00443015 /* TopView.xib */; };
 		68DC544A1F711CC000E53BB3 /* CodeScan.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 68DC54491F711CC000E53BB3 /* CodeScan.bundle */; };
@@ -87,6 +90,9 @@
 		687E57FE1F72028600B50872 /* AirPuterfierCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AirPuterfierCell.swift; path = ../AirPuterfierCell.swift; sourceTree = "<group>"; };
 		687E57FF1F72028600B50872 /* AirPuterfierCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AirPuterfierCell.xib; path = ../AirPuterfierCell.xib; sourceTree = "<group>"; };
 		6884D3001F74B1D9009CD97B /* GYHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GYHelper.swift; sourceTree = "<group>"; };
+		6884D3021F74D5FD009CD97B /* WaterPurifiCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaterPurifiCell.swift; sourceTree = "<group>"; };
+		6884D3031F74D5FD009CD97B /* WaterPurifiCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WaterPurifiCell.xib; sourceTree = "<group>"; };
+		6884D3061F74E077009CD97B /* WaterPurifierHeadCircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaterPurifierHeadCircleView.swift; sourceTree = "<group>"; };
 		689CE0DB1F726CA200443015 /* TopView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TopView.swift; path = ../TopView.swift; sourceTree = "<group>"; };
 		689CE0DD1F726CAE00443015 /* TopView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TopView.xib; path = ../TopView.xib; sourceTree = "<group>"; };
 		68DC54491F711CC000E53BB3 /* CodeScan.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CodeScan.bundle; sourceTree = "<group>"; };
@@ -126,10 +132,13 @@
 		6837370F1F73A48700367194 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				6884D3061F74E077009CD97B /* WaterPurifierHeadCircleView.swift */,
 				689CE0DB1F726CA200443015 /* TopView.swift */,
 				689CE0DD1F726CAE00443015 /* TopView.xib */,
 				687E57FE1F72028600B50872 /* AirPuterfierCell.swift */,
 				687E57FF1F72028600B50872 /* AirPuterfierCell.xib */,
+				6884D3021F74D5FD009CD97B /* WaterPurifiCell.swift */,
+				6884D3031F74D5FD009CD97B /* WaterPurifiCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -376,6 +385,7 @@
 				6847109E1F6F5A3000CB69CC /* Main.storyboard in Resources */,
 				68DC54511F711D4200E53BB3 /* ScanResultController.xib in Resources */,
 				68DC544A1F711CC000E53BB3 /* CodeScan.bundle in Resources */,
+				6884D3051F74D5FD009CD97B /* WaterPurifiCell.xib in Resources */,
 				687E58011F72028600B50872 /* AirPuterfierCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -450,6 +460,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				686E3F2B1F722995006D7411 /* GYServiceApi.swift in Sources */,
+				6884D3071F74E077009CD97B /* WaterPurifierHeadCircleView.swift in Sources */,
 				6847109B1F6F5A3000CB69CC /* ViewController.swift in Sources */,
 				686E3F281F722995006D7411 /* GYErrorCode.swift in Sources */,
 				683737141F73A72D00367194 /* HistoryVc.swift in Sources */,
@@ -459,6 +470,7 @@
 				686E3F201F72078F006D7411 /* AirPuterfierModel.swift in Sources */,
 				689CE0DC1F726CA200443015 /* TopView.swift in Sources */,
 				686E3F291F722995006D7411 /* GYNetWorking.swift in Sources */,
+				6884D3041F74D5FD009CD97B /* WaterPurifiCell.swift in Sources */,
 				684710CB1F6F5E0900CB69CC /* MQTTHelper.swift in Sources */,
 				68DC54521F711D4200E53BB3 /* ScanResultController.swift in Sources */,
 				686E3F2A1F722995006D7411 /* GYRouter.swift in Sources */,
