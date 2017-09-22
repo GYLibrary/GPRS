@@ -49,7 +49,6 @@ class MQTTHelper: NSObject {
             
             switch code {
             case ConnectionAccepted:
-                
                 print("连接成功!")
             case ConnectionRefusedUnacceptableProtocolVersion:
                 print("ConnectionRefusedUnacceptableProtocolVersion")

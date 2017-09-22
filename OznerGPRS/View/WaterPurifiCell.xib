@@ -29,7 +29,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fpC-Pq-Src">
                                         <rect key="frame" x="54.5" y="109.5" width="197" height="53.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="23" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Xd-3v-PeQ">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Xd-3v-PeQ">
                                                 <rect key="frame" x="123.5" y="0.0" width="73.5" height="34.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="9Xd-3v-PeQ" secondAttribute="height" multiplier="75:35" id="7hg-CN-LtV"/>
@@ -56,7 +56,7 @@
                                                 <color key="textColor" red="0.2248979509" green="0.45124465229999999" blue="0.87913560869999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="172" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IQI-B8-h4t">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IQI-B8-h4t">
                                                 <rect key="frame" x="0.0" y="0.0" width="73.5" height="39.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="IQI-B8-h4t" secondAttribute="height" multiplier="75:35" constant="-10.714285714285708" id="Ys5-JC-Iwa"/>

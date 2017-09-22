@@ -18,7 +18,7 @@ import UIKit
 struct MqttSendStruct {
     
     var key:String = ""
-    var value:AnyObject = "" as AnyObject
+    var value:Any = ""
     var type:String = ""
     
 }

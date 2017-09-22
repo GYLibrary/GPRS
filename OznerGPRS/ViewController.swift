@@ -172,14 +172,14 @@ class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSourc
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "WaterPurifiCellID") as! WaterPurifiCell
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "WaterPurifiCellID") as! WaterPurifiCell
         
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "AirPuterfierCellID") as! AirPuterfierCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "AirPuterfierCellID") as! AirPuterfierCell
 //        
         cell.selectionStyle = .none
         //159  225 250
 //        cell.backgroundColor = UIColor.init(red: 159/255.0, green: 225/255.0, blue: 250/255.0, alpha: 1.0)
-//        cell.reloadUI(dataArr)
+        cell.reloadUI(dataArr)
         return cell
         
     }

@@ -48,7 +48,6 @@ class WaterPurifiCell: UITableViewCell {
                 break
         }
         
-        
     }
     
     

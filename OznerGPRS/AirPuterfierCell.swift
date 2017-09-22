@@ -93,7 +93,7 @@ class AirPuterfierCell: UITableViewCell {
 //        let str = String.init(data: data, encoding: String.Encoding.utf8)
 //        print(str!)
         
-        let model  = MqttSendStruct(key: "WINDSPEED", value: speedArr[currenSpeed] as AnyObject, type: "Integer")
+        let model  = MqttSendStruct(key: "WINDSPEED", value: speedArr[currenSpeed], type: "Integer")
         
         let mqtt = MQTTHelper.default
         mqtt.sendStringToDevice(GYHelper.mqttModelToJsonString(model), topic: "AirPurifier/f0fe6b49d02d")
@@ -103,7 +103,16 @@ class AirPuterfierCell: UITableViewCell {
     //童锁
     @IBAction func speedSetAction(_ sender: UIButton) {
         
-        let model  = MqttSendStruct(key: "WINDSPEED", value: true as AnyObject, type: "Boolean")
+        var isPower = true
+        if sender.titleLabel?.text == "关" {
+            isPower = !isPower
+            sender.setTitle("开", for: UIControlState.normal)
+        } else {
+            sender.setTitle("关", for: UIControlState.normal)
+        }
+
+        
+        let model  = MqttSendStruct(key: "CHILDLOCK", value: isPower , type: "Boolean")
         
         let mqtt = MQTTHelper.default
         mqtt.sendStringToDevice(GYHelper.mqttModelToJsonString(model), topic: "AirPurifier/f0fe6b49d02d")
@@ -123,6 +132,21 @@ class AirPuterfierCell: UITableViewCell {
     
     @IBAction func power(_ sender: UIButton) {
     
+        var isPower = true
+        
+        if sender.titleLabel?.text == "关机" {
+            isPower = !isPower
+            sender.setTitle("开机", for: UIControlState.normal)
+        } else {
+            sender.setTitle("关机", for: UIControlState.normal)
+        }
+        
+        let model  = MqttSendStruct(key: "POWER", value: isPower, type: "Boolean")
+        
+        let mqtt = MQTTHelper.default
+        mqtt.sendStringToDevice(GYHelper.mqttModelToJsonString(model), topic: "AirPurifier/f0fe6b49d02d")
+
+        
 //        let arr = [["key":"POWER","value":isPower,"type":"Boolean","updateTime":Date().timeIntervalSince1970]]
 //        let data = try! JSONSerialization.data(withJSONObject: arr, options: JSONSerialization.WritingOptions.prettyPrinted)
 //
