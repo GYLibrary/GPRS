@@ -27,6 +27,7 @@ class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSourc
 
         mqttInfo()
         
+//        tableView.backgroundColor = UIColor.init(red: 159/255.0, green: 225/255.0, blue: 250/255.0, alpha: 1.0)
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -176,6 +177,8 @@ class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSourc
 //        let cell = tableView.dequeueReusableCell(withIdentifier: "AirPuterfierCellID") as! AirPuterfierCell
 //        
         cell.selectionStyle = .none
+        //159  225 250
+//        cell.backgroundColor = UIColor.init(red: 159/255.0, green: 225/255.0, blue: 250/255.0, alpha: 1.0)
 //        cell.reloadUI(dataArr)
         return cell
         

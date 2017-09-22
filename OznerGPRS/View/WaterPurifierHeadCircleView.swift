@@ -28,7 +28,7 @@ class WaterPurifierHeadCircleView: UIView {
         let context=UIGraphicsGetCurrentContext()
         context!.setAllowsAntialiasing(true);
         context!.setLineWidth(2);
-        context!.setStrokeColor(UIColor(white: 1, alpha: 0.8).cgColor);
+        context!.setStrokeColor(UIColor.lightGray.cgColor);
         context?.addArc(center: CGPoint(x: rect.size.width/2, y: rect.size.width/2), radius: rect.size.width/2-5, startAngle: -CGFloat(M_PI), endAngle: 0, clockwise: false)//clockwise顺时针
         context!.strokePath()
         if currentAngle[0] != 0 {
