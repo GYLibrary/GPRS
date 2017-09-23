@@ -14,7 +14,7 @@ class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSourc
 
     var topView:TopView!
     var mqtt:MQTTHelper!
-    var dataArr:[ValuesModel] = []
+    var dataArr:[String:ValuesModel] = [:]
     var cellCount:Int = 0 {
         didSet {
             tableView.reloadData()
@@ -61,36 +61,25 @@ class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSourc
             for item:Dictionary in dic {
                 
                 print(item["key"]!)
-                
-                for i in 0...self.dataArr.count - 1{
-                    
-                    if String(describing: item["key"]!) == self.dataArr[i].key {
                         
-                        self.dataArr.remove(at: i)
-                        
-                        let model = ValuesModel()
-                        model.key = item["key"] as! String
-                        model.updateTime = (item["updateTime"] as? Int ?? 0)!
-                        model.value = item["value"] as AnyObject
-                        
-                        self.dataArr.append(model)
-                        
-                        DispatchQueue.main.async {
-                            
-                            self.tableView.reloadData()
-                            
-                        }
-                        
-                        break
-                    }
-                    
-                }
+                let model = ValuesModel()
+                model.key = item["key"] as! String
+                model.updateTime = (item["updateTime"] as? Int ?? 0)!
+                model.value = item["value"] as AnyObject
+                self.dataArr[model.key] = model
                 
             }
+            
+            DispatchQueue.main.async {
+                
+                self.tableView.reloadData()
+                
+            }
+
         }
+    
         sleep(2)
-       
-        
+
         GYNetWorking.default.requestJson(GYRouter.getQuery(parameters: ["deviceType":"AirPurifier","deviceId":"f0fe6b49d02d"]), sucess: { (data) in
             
             //            print(data["values"])
@@ -101,8 +90,11 @@ class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSourc
                 let model = ValuesModel()
                 model.key = (item["key"] as? String)!
                 model.updateTime = (item["updateTime"] as? Int ?? 0)!
-                model.value = item["value"] as AnyObject
-                self.dataArr.append(model)
+                model.value = item["value"] ?? ""
+                if model.key == "Online" {
+                    print("当前连接状态:\(String(describing: model.value))")
+                }
+                self.dataArr[model.key] = model
                 
             }
             
@@ -119,7 +111,9 @@ class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSourc
         vc.blcok = { (str) in
             
             self.cellCount = 1
-            MQTTHelper.default.subscribeAction(str!)
+            MQTTHelper.default.subscribeAction(str!, block: { (state) in
+                print(state)
+            })
         }
         var style = LBXScanViewStyle()
         style.animationImage = UIImage(named: "CodeScan.bundle/qrcode_scan_light_green")
@@ -142,10 +136,11 @@ class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSourc
             
             self.tableView.tableHeaderView = nil
             cellCount = 1
-            mqtt.subscribeAction(str as! String)
+            mqtt.subscribeAction(str as! String, block: { (state) in
+                print(state)
+            })
             
         }
-        
     }
     
     

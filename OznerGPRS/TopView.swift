@@ -26,8 +26,9 @@ class TopView: UIView {
         let mqtt = MQTTHelper.default
         let str = devicetx.text! + "/" + mactx.text!
         
-        mqtt.subscribeAction(str)
-        
+        mqtt.subscribeAction(str) { (state) in
+            print(state)
+        }
         
     }
     @IBOutlet weak var devicetx: UITextField!

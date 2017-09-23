@@ -15,9 +15,36 @@
 
 import UIKit
 
+enum OznerDeviceState {
+    
+    case Connected
+    case Connecting
+    case Disconnected
+    
+}
+
+protocol OznerDeviceProtocol {
+    
+    func deviceState(_ state:OznerDeviceState)
+    
+}
+
 class OznerDevice: NSObject {
     
+    var isConnected:Bool = false
     
+    var currentState:OznerDeviceState = .Connecting
     
+    var devicetopic:String = ""
+    
+    init(_ topic:String) {
+        super.init()
+        
+        devicetopic = topic
+        MQTTHelper.default.subscribeAction(topic) { [weak self] (state) in
+            self?.currentState = state
+        }
+        
+    }
 
 }

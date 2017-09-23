@@ -19,6 +19,6 @@ class ValuesModel: NSObject {
     
     var key:String = ""
     var updateTime:Int = 0
-    var value:AnyObject?
+    var value:Any = ""
 
 }

@@ -90,11 +90,18 @@ class MQTTHelper: NSObject {
     }
     
     
-    func subscribeAction(_ str:String) {
+    func subscribeAction(_ str:String,block:@escaping (OznerDeviceState) ->Void) {
         print(str)
         
         mqttClient.subscribe(str, withQos: AtLeastOnce) { (result) in
             print(result ?? "")
+            
+            if (result as! [Int]) == [1] {
+                block(.Connected)
+            } else {
+                block(.Disconnected)
+            }
+            
             UserDefaults.standard.set(str, forKey: "OznerSubscribe")
             UserDefaults.standard.synchronize()
             

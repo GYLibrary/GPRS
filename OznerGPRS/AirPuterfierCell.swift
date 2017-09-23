@@ -29,29 +29,29 @@ class AirPuterfierCell: UITableViewCell {
         // Initialization code
     }
 
-    func reloadUI(_ models: [ValuesModel]) {
+    func reloadUI(_ models: [String:ValuesModel]) {
         
         
-        for item in models {
+        for (key,item) in models {
 
-            switch item.key {
+            switch key {
             case "PM25":
-                pmLb.text = String(describing: (item.value!))
+                pmLb.text = String(describing: (item.value))
                 break
             case "VOCVAL":
-                vocLb.text = String(describing: (item.value!))
+                vocLb.text = String(describing: (item.value))
                 break
             case "TIMEFIX1":
-                lxtimeLb.text = secondstoString(String(describing: (item.value!)))
+                lxtimeLb.text = secondstoString(String(describing: (item.value)))
                 break
             case "WINDSPEED":
-                speedLb.text = String(describing: (item.value!))
+                speedLb.text = String(describing: (item.value))
                 break
             case "CHILDLOCK":
-                lockStateLb.text = String(describing: (item.value!)) == "0" ? "关" : "开"
+                lockStateLb.text = String(describing: (item.value)) == "0" ? "关" : "开"
                 break
             case "POWER":
-                powerLb.text = String(describing: (item.value!)) == "0" ? "关机" : "开机"
+                powerLb.text = String(describing: (item.value)) == "0" ? "关机" : "开机"
                 break
                 
             default:
