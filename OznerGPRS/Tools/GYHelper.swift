@@ -35,4 +35,13 @@ class GYHelper: NSObject {
         return String.init(data: data, encoding: String.Encoding.utf8)!
     }
 
+    class func mqttModelToData(_ model:MqttSendStruct) -> Data {
+        
+        let arr = [["key":model.key,"value":model.value,"type":model.type,"updateTime":Date().timeIntervalSince1970]]
+        
+        let data = try! JSONSerialization.data(withJSONObject: arr, options: JSONSerialization.WritingOptions.prettyPrinted)
+        
+        return data
+    }
+    
 }

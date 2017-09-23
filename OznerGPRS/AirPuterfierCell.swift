@@ -85,18 +85,11 @@ class AirPuterfierCell: UITableViewCell {
             currenSpeed = 0
         }
         
-        
-//        let arr = [["key":"WINDSPEED","value":speedArr[currenSpeed],"type":"Integer","updateTime":Date().timeIntervalSince1970]]
-//        
-//        let data = try! JSONSerialization.data(withJSONObject: arr, options: JSONSerialization.WritingOptions.prettyPrinted)
-//        
-//        let str = String.init(data: data, encoding: String.Encoding.utf8)
-//        print(str!)
-        
         let model  = MqttSendStruct(key: "WINDSPEED", value: speedArr[currenSpeed], type: "Integer")
         
         let mqtt = MQTTHelper.default
-        mqtt.sendStringToDevice(GYHelper.mqttModelToJsonString(model), topic: "AirPurifier/f0fe6b49d02d")
+//        mqtt.sendStringToDevice(GYHelper.mqttModelToJsonString(model), topic: "AirPurifier/f0fe6b49d02d")
+        mqtt.sendDataToDevice(GYHelper.mqttModelToData(model), topic: "AirPurifier/f0fe6b49d02d")
 
     }
     
@@ -115,16 +108,8 @@ class AirPuterfierCell: UITableViewCell {
         let model  = MqttSendStruct(key: "CHILDLOCK", value: isPower , type: "Boolean")
         
         let mqtt = MQTTHelper.default
-        mqtt.sendStringToDevice(GYHelper.mqttModelToJsonString(model), topic: "AirPurifier/f0fe6b49d02d")
-        
-//        let arr = [["key":"CHILDLOCK","value":isPower,"type":"Boolean","updateTime":Date().timeIntervalSince1970]]
-
-//        let data = try! JSONSerialization.data(withJSONObject: arr, options: JSONSerialization.WritingOptions.prettyPrinted)
-//        
-//        let str = String.init(data: data, encoding: String.Encoding.utf8)
-//        print(str!)
-//        let mqtt = MQTTHelper.default
-//        mqtt.sendStringToDevice(str!, topic: "AirPurifier/f0fe6b49d02d")
+//        mqtt.sendStringToDevice(GYHelper.mqttModelToJsonString(model), topic: "AirPurifier/f0fe6b49d02d")
+        mqtt.sendDataToDevice(GYHelper.mqttModelToData(model), topic: "AirPurifier/f0fe6b49d02d")
         
     }
     
@@ -144,23 +129,14 @@ class AirPuterfierCell: UITableViewCell {
         let model  = MqttSendStruct(key: "POWER", value: isPower, type: "Boolean")
         
         let mqtt = MQTTHelper.default
-        mqtt.sendStringToDevice(GYHelper.mqttModelToJsonString(model), topic: "AirPurifier/f0fe6b49d02d")
-
-        
-//        let arr = [["key":"POWER","value":isPower,"type":"Boolean","updateTime":Date().timeIntervalSince1970]]
-//        let data = try! JSONSerialization.data(withJSONObject: arr, options: JSONSerialization.WritingOptions.prettyPrinted)
-//
-//        let str = String.init(data: data, encoding: String.Encoding.utf8)
-//        print(str!)
-//        let mqtt = MQTTHelper.default
-//        mqtt.sendStringToDevice(str!, topic: "AirPurifier/f0fe6b49d02d")
+//        mqtt.sendStringToDevice(GYHelper.mqttModelToJsonString(model), topic: "AirPurifier/f0fe6b49d02d")
+        mqtt.sendDataToDevice(GYHelper.mqttModelToData(model), topic: "AirPurifier/f0fe6b49d02d")
         
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
     }
     
 }

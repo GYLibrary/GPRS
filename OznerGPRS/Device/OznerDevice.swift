@@ -37,14 +37,34 @@ class OznerDevice: NSObject {
     
     var devicetopic:String = ""
     
+    var deviceInfo:[String:ValuesModel] = [:]
+    
+    
+    /// 创建设备即订阅
+    ///
+    /// - Parameter topic: topic description
     init(_ topic:String) {
         super.init()
         
         devicetopic = topic
+        //订阅
         MQTTHelper.default.subscribeAction(topic) { [weak self] (state) in
             self?.currentState = state
+            print("通过创建设备订阅信息(\(state))")
         }
         
+        //此次更改当前设备类型
+        //此处网络获取相关配置信息
+        //添加配置
+        
     }
+    
+    
+    
+    
+    
+    
+    
+    
 
 }

@@ -20,7 +20,7 @@ typealias recievedDataBlock = (Data,String) -> Void
 
 
 class MQTTHelper: NSObject {
-    
+        
     private var mqttClient:MQTTClient!
     
     static let `default`: MQTTHelper = MQTTHelper()

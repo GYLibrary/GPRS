@@ -24,6 +24,7 @@ class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSourc
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(dataArr.count)
 
         mqttInfo()
         
@@ -110,10 +111,13 @@ class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSourc
         let vc = QQScanViewController();
         vc.blcok = { (str) in
             
+            let device = OznerDevice.init(str!)
+            
+            
             self.cellCount = 1
-            MQTTHelper.default.subscribeAction(str!, block: { (state) in
-                print(state)
-            })
+//            MQTTHelper.default.subscribeAction(str!, block: { (state) in
+//                print(state)
+//            })
         }
         var style = LBXScanViewStyle()
         style.animationImage = UIImage(named: "CodeScan.bundle/qrcode_scan_light_green")
