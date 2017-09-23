@@ -87,9 +87,10 @@ class AirPuterfierCell: UITableViewCell {
         
         let model  = MqttSendStruct(key: "WINDSPEED", value: speedArr[currenSpeed], type: "Integer")
         
-        let mqtt = MQTTHelper.default
+//        let mqtt = MQTTHelper.default
 //        mqtt.sendStringToDevice(GYHelper.mqttModelToJsonString(model), topic: "AirPurifier/f0fe6b49d02d")
-        mqtt.sendDataToDevice(GYHelper.mqttModelToData(model), topic: "AirPurifier/f0fe6b49d02d")
+//        mqtt.sendDataToDevice(GYHelper.mqttModelToData(model), topic: "AirPurifier/f0fe6b49d02d")
+        OznerManager.default.currentDevice.sendDataToService(GYHelper.mqttModelToData(model))
 
     }
     
@@ -107,10 +108,10 @@ class AirPuterfierCell: UITableViewCell {
         
         let model  = MqttSendStruct(key: "CHILDLOCK", value: isPower , type: "Boolean")
         
-        let mqtt = MQTTHelper.default
+//        let mqtt = MQTTHelper.default
 //        mqtt.sendStringToDevice(GYHelper.mqttModelToJsonString(model), topic: "AirPurifier/f0fe6b49d02d")
-        mqtt.sendDataToDevice(GYHelper.mqttModelToData(model), topic: "AirPurifier/f0fe6b49d02d")
-        
+//        mqtt.sendDataToDevice(GYHelper.mqttModelToData(model), topic: "AirPurifier/f0fe6b49d02d")
+        OznerManager.default.currentDevice.sendDataToService(GYHelper.mqttModelToData(model))
     }
     
     var power:Bool = true
@@ -128,9 +129,10 @@ class AirPuterfierCell: UITableViewCell {
         
         let model  = MqttSendStruct(key: "POWER", value: isPower, type: "Boolean")
         
-        let mqtt = MQTTHelper.default
+//        let mqtt = MQTTHelper.default
 //        mqtt.sendStringToDevice(GYHelper.mqttModelToJsonString(model), topic: "AirPurifier/f0fe6b49d02d")
-        mqtt.sendDataToDevice(GYHelper.mqttModelToData(model), topic: "AirPurifier/f0fe6b49d02d")
+//        mqtt.sendDataToDevice(GYHelper.mqttModelToData(model), topic: "AirPurifier/f0fe6b49d02d")
+        OznerManager.default.currentDevice.sendDataToService(GYHelper.mqttModelToData(model))
         
     }
     

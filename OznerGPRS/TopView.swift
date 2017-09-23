@@ -23,12 +23,9 @@ class TopView: UIView {
         
 //        sender.setTitle("连接中...", for: UIControlState.normal)
         block?()
-        let mqtt = MQTTHelper.default
         let str = devicetx.text! + "/" + mactx.text!
+        let _ = OznerDevice.init(str)
         
-        mqtt.subscribeAction(str) { (state) in
-            print(state)
-        }
         
     }
     @IBOutlet weak var devicetx: UITextField!

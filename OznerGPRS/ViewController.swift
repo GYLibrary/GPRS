@@ -111,7 +111,7 @@ class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSourc
         let vc = QQScanViewController();
         vc.blcok = { (str) in
             
-            let device = OznerDevice.init(str!)
+            let _ = OznerDevice.init(str!)
             
             
             self.cellCount = 1
@@ -140,9 +140,11 @@ class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSourc
             
             self.tableView.tableHeaderView = nil
             cellCount = 1
-            mqtt.subscribeAction(str as! String, block: { (state) in
-                print(state)
-            })
+//            mqtt.subscribeAction(str as! String, block: { (state) in
+//                print(state)
+//            })
+
+            let _ = OznerDevice.init(str as! String)
             
         }
     }

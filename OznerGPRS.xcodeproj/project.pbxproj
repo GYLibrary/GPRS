@@ -33,6 +33,7 @@
 		6884D30A1F74EEA9009CD97B /* OznerDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6884D3091F74EEA9009CD97B /* OznerDevice.swift */; };
 		689CE0DC1F726CA200443015 /* TopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689CE0DB1F726CA200443015 /* TopView.swift */; };
 		689CE0DE1F726CAE00443015 /* TopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 689CE0DD1F726CAE00443015 /* TopView.xib */; };
+		68A27D511F76307500F99713 /* OznerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A27D501F76307500F99713 /* OznerManager.swift */; };
 		68DC544A1F711CC000E53BB3 /* CodeScan.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 68DC54491F711CC000E53BB3 /* CodeScan.bundle */; };
 		68DC544C1F711D0C00E53BB3 /* GYScanVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68DC544B1F711D0C00E53BB3 /* GYScanVc.swift */; };
 		68DC544E1F711D3D00E53BB3 /* QQScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68DC544D1F711D3D00E53BB3 /* QQScanViewController.swift */; };
@@ -97,6 +98,7 @@
 		6884D3091F74EEA9009CD97B /* OznerDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OznerDevice.swift; sourceTree = "<group>"; };
 		689CE0DB1F726CA200443015 /* TopView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TopView.swift; path = ../TopView.swift; sourceTree = "<group>"; };
 		689CE0DD1F726CAE00443015 /* TopView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TopView.xib; path = ../TopView.xib; sourceTree = "<group>"; };
+		68A27D501F76307500F99713 /* OznerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OznerManager.swift; sourceTree = "<group>"; };
 		68A541AB1F74F3E100D41E60 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 		68DC54491F711CC000E53BB3 /* CodeScan.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CodeScan.bundle; sourceTree = "<group>"; };
 		68DC544B1F711D0C00E53BB3 /* GYScanVc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GYScanVc.swift; path = ../GYScanVc.swift; sourceTree = "<group>"; };
@@ -255,6 +257,7 @@
 		6884D3081F74EE95009CD97B /* Device */ = {
 			isa = PBXGroup;
 			children = (
+				68A27D501F76307500F99713 /* OznerManager.swift */,
 				6884D3091F74EEA9009CD97B /* OznerDevice.swift */,
 				68A541AB1F74F3E100D41E60 /* MyPlayground.playground */,
 			);
@@ -483,6 +486,7 @@
 				687E58001F72028600B50872 /* AirPuterfierCell.swift in Sources */,
 				686E3F201F72078F006D7411 /* AirPuterfierModel.swift in Sources */,
 				689CE0DC1F726CA200443015 /* TopView.swift in Sources */,
+				68A27D511F76307500F99713 /* OznerManager.swift in Sources */,
 				686E3F291F722995006D7411 /* GYNetWorking.swift in Sources */,
 				6884D3041F74D5FD009CD97B /* WaterPurifiCell.swift in Sources */,
 				684710CB1F6F5E0900CB69CC /* MQTTHelper.swift in Sources */,

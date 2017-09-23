@@ -53,6 +53,7 @@ class OznerDevice: NSObject {
             print("通过创建设备订阅信息(\(state))")
         }
         
+        OznerManager.default.currentDevice = self
         //此次更改当前设备类型
         //此处网络获取相关配置信息
         //添加配置
@@ -60,11 +61,11 @@ class OznerDevice: NSObject {
     }
     
     
-    
-    
-    
-    
-    
-    
+    func sendDataToService(_ data:Data) {
+        
+        MQTTHelper.default.sendDataToDevice(data, topic: self.devicetopic)
+        
+    }
+
 
 }
