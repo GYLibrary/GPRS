@@ -18,6 +18,7 @@ import UIKit
 
 class AirPuterfierCell: UITableViewCell {
         
+    @IBOutlet weak var isOnline: UILabel!
     @IBOutlet weak var pmLb: UILabel!
     @IBOutlet weak var lxtimeLb: UILabel!
     @IBOutlet weak var powerLb: UILabel!
@@ -35,6 +36,9 @@ class AirPuterfierCell: UITableViewCell {
         for (key,item) in models {
 
             switch key {
+            case "Online":
+                isOnline.text = String(describing: (item.value))  == "0" ? "设备掉线" : "设备在线"
+                break
             case "PM25":
                 pmLb.text = String(describing: (item.value))
                 break

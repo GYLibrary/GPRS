@@ -19,7 +19,24 @@ class OznerManager: NSObject {
 
     static let `default`: OznerManager = OznerManager()
     
-    var currentDevice:OznerDevice!
+    // 切换水杯时先取消当前设备的订阅
+    var currentDevice:OznerDevice! {
+        
+        didSet {
+            
+            if currentDevice != oldValue {
+                
+                if let _ = oldValue {
+                    oldValue.unsubscribAction()
+
+                }
+                
+                
+            }
+            
+        }
+        
+    }
     
     
 }

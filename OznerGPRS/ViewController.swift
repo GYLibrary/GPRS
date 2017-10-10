@@ -14,7 +14,9 @@ class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSourc
 
     var topView:TopView!
     var mqtt:MQTTHelper!
-    var dataArr:[String:ValuesModel] = [:]
+    var dataArr:[[String:ValuesModel]] = [[:]]
+    
+    var roData:[ValuesModel] = []
     var cellCount:Int = 0 {
         didSet {
             tableView.reloadData()
@@ -42,9 +44,10 @@ class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSourc
         }
         
         tableView.tableHeaderView = topView
-        tableView.separatorStyle = .none
+//        tableView.separatorStyle = .none
         tableView.register(UINib.init(nibName: "AirPuterfierCell", bundle: nil), forCellReuseIdentifier: "AirPuterfierCellID")
         tableView.register(UINib.init(nibName: "WaterPurifiCell", bundle: nil), forCellReuseIdentifier: "WaterPurifiCellID")
+          tableView.register(UINib.init(nibName: "RowaterCell", bundle: nil), forCellReuseIdentifier: "RowaterCellID")
     }
     
     private func mqttInfo() {
@@ -67,8 +70,8 @@ class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSourc
                 model.key = item["key"] as! String
                 model.updateTime = (item["updateTime"] as? Int ?? 0)!
                 model.value = item["value"] as AnyObject
-                self.dataArr[model.key] = model
-                
+//                self.dataArr[model.key] = model
+                self.roData.append(model)
             }
             
             DispatchQueue.main.async {
@@ -81,11 +84,11 @@ class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSourc
     
         sleep(2)
 
-        GYNetWorking.default.requestJson(GYRouter.getQuery(parameters: ["deviceType":"AirPurifier","deviceId":"f0fe6b49d02d"]), sucess: { (data) in
+        GYNetWorking.default.requestJson(GYRouter.getQuery(parameters: ["deviceType":"RoWater","deviceId":"123456aabbcc"]), sucess: { (data) in
             
             //            print(data["values"])
             let jsonArr = data["values"] as! [[String:Any]]
-            
+            print(jsonArr)
             for item in jsonArr {
                 
                 let model = ValuesModel()
@@ -95,7 +98,8 @@ class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSourc
                 if model.key == "Online" {
                     print("当前连接状态:\(String(describing: model.value))")
                 }
-                self.dataArr[model.key] = model
+//                self.dataArr[model.key] = model
+                self.roData.append(model)
                 
             }
             
@@ -112,7 +116,6 @@ class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSourc
         vc.blcok = { (str) in
             
             let _ = OznerDevice.init(str!)
-            
             
             self.cellCount = 1
 //            MQTTHelper.default.subscribeAction(str!, block: { (state) in
@@ -152,7 +155,7 @@ class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSourc
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return cellCount
+        return roData.count
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -173,14 +176,16 @@ class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSourc
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "WaterPurifiCellID") as! WaterPurifiCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "RowaterCellID") as! RowaterCell
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "AirPuterfierCellID") as! AirPuterfierCell
-//        
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "AirPuterfierCellID") as! AirPuterfierCell
+//
         cell.selectionStyle = .none
+        let model = roData[indexPath.row]
+        
         //159  225 250
 //        cell.backgroundColor = UIColor.init(red: 159/255.0, green: 225/255.0, blue: 250/255.0, alpha: 1.0)
-        cell.reloadUI(dataArr)
+        cell.reloadUI(model)
         return cell
         
     }
@@ -201,7 +206,8 @@ class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSourc
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return view.frame.height - 70
+//        return view.frame.height - 70
+        return 50
     }
     
     

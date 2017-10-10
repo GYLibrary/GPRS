@@ -20,7 +20,8 @@ typealias recievedDataBlock = (Data,String) -> Void
 
 
 class MQTTHelper: NSObject {
-        
+    
+    
     private var mqttClient:MQTTClient!
     
     static let `default`: MQTTHelper = MQTTHelper()
@@ -31,10 +32,10 @@ class MQTTHelper: NSObject {
         
         super.init()
         
-        mqttClient = MQTTClient(clientId: "1231zhu777777788")
+        mqttClient = MQTTClient(clientId: "v1-app-12d4aeb072c1")
         mqttClient.port=1884
         
-        mqttClient.username="17621050877"//手机号
+        mqttClient.username="admin12d4aeb072c1"//手机号
         var token = "12345678" + "@\(mqttClient.username!)" + "@\(mqttClient.clientID!)"
         
         token = Helper.base64EncodedString(from: Helper.md5(token))
@@ -112,9 +113,9 @@ class MQTTHelper: NSObject {
         
         mqttClient.unsubscribe(str) {
             
-            print("已取消订阅")
-            UserDefaults.standard.setValue(nil, forKey: "OznerSubscribe")
-            UserDefaults.standard.synchronize()
+//            print("已取消订阅")
+//            UserDefaults.standard.setValue(nil, forKey: "OznerSubscribe")
+//            UserDefaults.standard.synchronize()
 
         }
         

@@ -7,4 +7,3 @@ var str = "Hello, playground"
 var isBool = true
 
 print("\(isBool)")
-

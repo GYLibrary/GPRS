@@ -66,6 +66,10 @@ class OznerDevice: NSObject {
         MQTTHelper.default.sendDataToDevice(data, topic: self.devicetopic)
         
     }
+    
+    func unsubscribAction() {
+        MQTTHelper.default.unsubscribAction(self.devicetopic)
+    }
 
 
 }

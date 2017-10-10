@@ -34,6 +34,8 @@
 		689CE0DC1F726CA200443015 /* TopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689CE0DB1F726CA200443015 /* TopView.swift */; };
 		689CE0DE1F726CAE00443015 /* TopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 689CE0DD1F726CAE00443015 /* TopView.xib */; };
 		68A27D511F76307500F99713 /* OznerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A27D501F76307500F99713 /* OznerManager.swift */; };
+		68CB63401F8CA4A9004164C9 /* RowaterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CB633E1F8CA4A9004164C9 /* RowaterCell.swift */; };
+		68CB63411F8CA4A9004164C9 /* RowaterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68CB633F1F8CA4A9004164C9 /* RowaterCell.xib */; };
 		68DC544A1F711CC000E53BB3 /* CodeScan.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 68DC54491F711CC000E53BB3 /* CodeScan.bundle */; };
 		68DC544C1F711D0C00E53BB3 /* GYScanVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68DC544B1F711D0C00E53BB3 /* GYScanVc.swift */; };
 		68DC544E1F711D3D00E53BB3 /* QQScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68DC544D1F711D3D00E53BB3 /* QQScanViewController.swift */; };
@@ -99,7 +101,9 @@
 		689CE0DB1F726CA200443015 /* TopView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TopView.swift; path = ../TopView.swift; sourceTree = "<group>"; };
 		689CE0DD1F726CAE00443015 /* TopView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TopView.xib; path = ../TopView.xib; sourceTree = "<group>"; };
 		68A27D501F76307500F99713 /* OznerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OznerManager.swift; sourceTree = "<group>"; };
-		68A541AB1F74F3E100D41E60 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
+		68A541AB1F74F3E100D41E60 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		68CB633E1F8CA4A9004164C9 /* RowaterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowaterCell.swift; sourceTree = "<group>"; };
+		68CB633F1F8CA4A9004164C9 /* RowaterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RowaterCell.xib; sourceTree = "<group>"; };
 		68DC54491F711CC000E53BB3 /* CodeScan.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CodeScan.bundle; sourceTree = "<group>"; };
 		68DC544B1F711D0C00E53BB3 /* GYScanVc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GYScanVc.swift; path = ../GYScanVc.swift; sourceTree = "<group>"; };
 		68DC544D1F711D3D00E53BB3 /* QQScanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QQScanViewController.swift; path = ../QQScanViewController.swift; sourceTree = "<group>"; };
@@ -144,6 +148,8 @@
 				687E57FF1F72028600B50872 /* AirPuterfierCell.xib */,
 				6884D3021F74D5FD009CD97B /* WaterPurifiCell.swift */,
 				6884D3031F74D5FD009CD97B /* WaterPurifiCell.xib */,
+				68CB633E1F8CA4A9004164C9 /* RowaterCell.swift */,
+				68CB633F1F8CA4A9004164C9 /* RowaterCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -395,6 +401,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68CB63411F8CA4A9004164C9 /* RowaterCell.xib in Resources */,
 				689CE0DE1F726CAE00443015 /* TopView.xib in Resources */,
 				684710A31F6F5A3000CB69CC /* LaunchScreen.storyboard in Resources */,
 				684710A01F6F5A3000CB69CC /* Assets.xcassets in Resources */,
@@ -483,6 +490,7 @@
 				683737141F73A72D00367194 /* HistoryVc.swift in Sources */,
 				686E3F2D1F7229E3006D7411 /* SwiftNotice.swift in Sources */,
 				68DC544E1F711D3D00E53BB3 /* QQScanViewController.swift in Sources */,
+				68CB63401F8CA4A9004164C9 /* RowaterCell.swift in Sources */,
 				687E58001F72028600B50872 /* AirPuterfierCell.swift in Sources */,
 				686E3F201F72078F006D7411 /* AirPuterfierModel.swift in Sources */,
 				689CE0DC1F726CA200443015 /* TopView.swift in Sources */,

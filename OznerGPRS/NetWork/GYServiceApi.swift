@@ -43,7 +43,6 @@ class GYServiceApi: NSObject {
 
        return "\(host)/setter.do"
     }
-
     
     /// 查询设备信息
     ///
@@ -68,14 +67,12 @@ class GYServiceApi: NSObject {
         return "\(host)/App/AppLogin/APPLogin"
     }
     
-    
     /// 注册
     ///
     /// - Returns: return value description
     internal class func register() -> String {
         return "\(host)/APP/AppLogin/APPLogin"
     }
-    
     
     /// 核算贷款额度 此处可添加用户个人申请额度
     ///
@@ -90,9 +87,7 @@ class GYServiceApi: NSObject {
     /// - Returns: return value description
     internal class func SubmitApplication() -> String {
         return "\(host)/App/Apply/SubmitApply"
-    }
-    
-    
+    }    
     
     /// 获取用户信息
     ///
