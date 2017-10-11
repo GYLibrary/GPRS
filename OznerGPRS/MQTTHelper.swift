@@ -113,9 +113,9 @@ class MQTTHelper: NSObject {
         
         mqttClient.unsubscribe(str) {
             
-//            print("已取消订阅")
-//            UserDefaults.standard.setValue(nil, forKey: "OznerSubscribe")
-//            UserDefaults.standard.synchronize()
+            print("已取消订阅")
+            UserDefaults.standard.setValue(nil, forKey: "OznerSubscribe")
+            UserDefaults.standard.synchronize()
 
         }
         

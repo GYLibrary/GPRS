@@ -84,7 +84,7 @@ class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSourc
     
         sleep(2)
 
-        GYNetWorking.default.requestJson(GYRouter.getQuery(parameters: ["deviceType":"RoWater","deviceId":"123456aabbcc"]), sucess: { (data) in
+        GYNetWorking.default.requestJson(GYRouter.getQuery(parameters: ["deviceType":"RoWater","deviceId":"866873022333770"]), sucess: { (data) in
             
             //            print(data["values"])
             let jsonArr = data["values"] as! [[String:Any]]
