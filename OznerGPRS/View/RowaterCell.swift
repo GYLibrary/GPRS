@@ -15,6 +15,7 @@ class RowaterCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        self.contentView.bounds = UIScreen.main.bounds
     }
     
     func reloadUI(_ models:ValuesModel) {
